@@ -1,2 +1,2 @@
-# csc148_at_ut
+# CSC148 @ University of Toronto homework codes
 # csc148
