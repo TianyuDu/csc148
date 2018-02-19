@@ -12,11 +12,12 @@ your own curiousity!)
 from strategy import *
 from typing import Any, Callable
 from subtract_square_game import SubtractSquareGame
+from stonehenge import *
 
 # TODO: Replace None with the corresponding class name for your games.
 # 'h' should map to Stonehenge.
 playable_games = {'s': SubtractSquareGame,
-                  'h': None}
+                  'h': StonehengeGame}
 
 # TODO: Replace None with the corresponding function names for your strategies.
 # 'mr' should map to your recursive implementation of minimax while

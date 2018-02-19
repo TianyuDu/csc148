@@ -4,7 +4,15 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="" />
+    <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/assignment/a2/draft_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment/a2/stonehenge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/draft.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/draft.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/game_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/stonehenge.py..py" beforeDir="false" />
+    </list>
     <ignored path="csc148.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,23 +50,14 @@
     <favorites_list name="csc148" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.41864717">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assignment/a2/game.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
-                  <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="stonehenge_unittest_basic.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2931">
-                  <caret line="110" column="13" lean-forward="true" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+                <state relative-caret-position="1323">
+                  <caret line="49" selection-start-line="49" selection-end-line="49" />
                 </state>
               </provider>
             </entry>
@@ -66,17 +65,35 @@
           <file leaf-file-name="game_state.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assignment/a2/game_state.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1971">
-                  <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+                <state relative-caret-position="-1098">
+                  <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="game_interface.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="game_interface.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assignment/a2/game_interface.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1674">
-                  <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+                <state relative-caret-position="1094">
+                  <caret line="129" selection-start-line="129" selection-end-line="129" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="draft_2.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignment/a2/draft_2.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="498">
+                  <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="draft.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/assignment/a2/draft.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="26" selection-start-line="26" selection-end-line="31" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -84,21 +101,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="stonehenge.py..py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py..py">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="stonehenge.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-586">
-                  <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="draft.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/assignment/a2/draft.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1453">
-                  <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+                <state relative-caret-position="395">
+                  <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -116,7 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>current_state</find>
       <find>game</find>
       <find>test_subtractsquare_str</find>
       <find>test_subtractsquare_get_possible_moves</find>
@@ -130,11 +137,11 @@
       <find>test_is_over_true</find>
       <find>make</find>
       <find>get_possible_moves()</find>
-      <find>return self</find>
+      <find />
       <find>get_possible_move</find>
       <find>get_possible_moves</find>
       <find>print</find>
-      <find>def get_possible_moves</find>
+      <find />
       <find>make_move</find>
       <find>test_chopsticks_get_possible_moves</find>
       <find>get_next_player</find>
@@ -146,6 +153,7 @@
       <find>playable_games</find>
       <find>side</find>
       <find>str_to_move</find>
+      <find />
     </findStrings>
     <replaceStrings>
       <replace />
@@ -153,6 +161,9 @@
     <dirStrings>
       <dir>$PROJECT_DIR$/assignment</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -169,8 +180,11 @@
         <option value="$PROJECT_DIR$/lab/lab4/ex.py" />
         <option value="$PROJECT_DIR$/lecture/sudoku_check.py" />
         <option value="$PROJECT_DIR$/lab/lab4/ex_edited.py" />
-        <option value="$PROJECT_DIR$/assignment/a2/stonehenge.py..py" />
         <option value="$PROJECT_DIR$/assignment/a2/draft.py" />
+        <option value="$PROJECT_DIR$/assignment/a2/draft_2.py" />
+        <option value="$PROJECT_DIR$/assignment/a2/stonehenge.py..py" />
+        <option value="$PROJECT_DIR$/assignment/a2/game_interface.py" />
+        <option value="$PROJECT_DIR$/assignment/a2/stonehenge.py" />
       </list>
     </option>
   </component>
@@ -187,9 +201,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="41" />
     <option name="y" value="22" />
-    <option name="width" value="1920" />
+    <option name="width" value="1879" />
     <option name="height" value="1178" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -229,11 +244,13 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +278,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,7 +314,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.draft">
+  <component name="RunManager" selected="Python.game_interface">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -351,6 +367,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignment/a2/game_interface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="stonehenge.py." type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="csc148" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/assignment/a2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignment/a2/stonehenge.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -574,24 +609,6 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration name="Doctest LinkedList.__eq__ (1)" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
-      <module name="csc148" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab/lab4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lab/lab4/ex_edited.py" />
-      <option name="CLASS_NAME" value="LinkedList" />
-      <option name="METHOD_NAME" value="__eq__" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-    </configuration>
     <configuration name="Doctest LinkedList.copy" type="tests" factoryName="Doctests" temporary="true" nameIsGenerated="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -629,19 +646,19 @@
       <option name="USE_PATTERN" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Doctest LinkedList.__eq__ (1)" />
       <item itemvalue="Python tests.Doctest LinkedList.delete_after" />
       <item itemvalue="Python tests.Doctest LinkedList.copy" />
       <item itemvalue="Python.game_interface" />
       <item itemvalue="Python.draft" />
+      <item itemvalue="Python.stonehenge.py." />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.draft" />
         <item itemvalue="Python.game_interface" />
+        <item itemvalue="Python.stonehenge.py." />
+        <item itemvalue="Python.draft" />
         <item itemvalue="Python tests.Doctest LinkedList.copy" />
         <item itemvalue="Python tests.Doctest LinkedList.delete_after" />
-        <item itemvalue="Python tests.Doctest LinkedList.__eq__ (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -701,28 +718,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="TODO" order="5" sideWeight="0.50448143" side_tool="true" weight="0.20607029" />
       <window_info anchor="right" id="Event Log" order="9" show_stripe_button="false" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="430" height="978" id="Documentation" order="12" sideWeight="0.49551857" side_tool="true" weight="0.18956336" />
-      <window_info active="true" anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" visible="true" weight="0.437613" />
-      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.24231465" />
+      <window_info anchor="right" x="0" y="0" width="430" height="1000" id="Documentation" order="12" sideWeight="0.49551857" side_tool="true" weight="0.18956336" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.29816514" />
+      <window_info active="true" anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" visible="true" weight="0.36055046" />
       <window_info anchor="right" id="Terminal" order="7" show_stripe_button="false" side_tool="true" weight="0.32977304" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" weight="0.12619808" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.12619808" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" order="10" weight="0.32960597" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Debug" order="6" weight="0.21246007" />
       <window_info x="-96" y="763" width="3100" height="478" id="Favorites" order="3" sideWeight="0.5045208" side_tool="true" weight="0.11661342" />
+      <window_info anchor="right" id="Debug" order="6" weight="0.21246007" />
+      <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Inspection" order="8" weight="0.4946695" />
-      <window_info id="Course Description" order="2" sideWeight="0.50079745" side_tool="true" weight="0.24919094" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Changes" order="0" />
-      <window_info anchor="bottom" id="Application Servers" order="1" />
+      <window_info id="Course Description" order="2" sideWeight="0.50079745" side_tool="true" weight="0.24919094" />
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32977304" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -730,32 +748,32 @@
       <window_info anchor="right" id="Data View" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Find" order="4" weight="0.32977304" />
+      <window_info anchor="bottom" id="Application Servers" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.12619808" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="10" weight="0.32960597" />
+      <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" visible="true" weight="0.35985532" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info x="-96" y="763" width="3100" height="478" id="Favorites" order="3" sideWeight="0.5045208" side_tool="true" weight="0.11661342" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.12619808" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="TODO" order="5" sideWeight="0.50448143" side_tool="true" weight="0.20607029" />
-      <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" visible="true" weight="0.35985532" />
       <window_info anchor="bottom" id="Changes" order="0" />
       <window_info id="Course Description" order="2" sideWeight="0.50079745" side_tool="true" weight="0.24919094" />
-      <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.24231465" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="right" id="Debug" order="6" weight="0.21246007" />
+      <window_info anchor="right" id="Find" order="4" weight="0.32977304" />
       <window_info anchor="right" x="0" y="0" width="430" height="978" id="Documentation" order="12" sideWeight="0.49551857" side_tool="true" weight="0.18956336" />
-      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
+      <window_info anchor="right" id="Debug" order="6" weight="0.21246007" />
+      <window_info anchor="bottom" id="Messages" order="6" weight="0.32977304" />
       <window_info anchor="right" id="Terminal" order="7" show_stripe_button="false" side_tool="true" weight="0.32977304" />
       <window_info anchor="right" id="Event Log" order="9" show_stripe_button="false" side_tool="true" />
       <window_info anchor="right" id="Inspection" order="8" weight="0.4946695" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" order="1" />
-      <window_info anchor="bottom" id="Messages" order="6" weight="0.32977304" />
+      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info anchor="right" id="SciView" order="10" weight="0.32960597" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info anchor="right" id="Data View" order="11" />
-      <window_info x="-96" y="763" width="3100" height="478" id="Favorites" order="3" sideWeight="0.5045208" side_tool="true" weight="0.11661342" />
+      <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.24231465" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -784,17 +802,10 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="38" />
+      <option name="time" value="39" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a1/a1_pyta.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1049,45 +1060,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py..py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-586">
-          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/game_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1971">
-          <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/game_interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1674">
-          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/draft.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1453">
-          <caret line="10" column="67" lean-forward="true" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
+        <state relative-caret-position="1323">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2931">
-          <caret line="110" column="13" lean-forward="true" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+        <state relative-caret-position="-468">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/game_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1098">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/draft.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" selection-start-line="26" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/draft_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/game_interface.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1094">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
