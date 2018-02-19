@@ -11,7 +11,8 @@ class StonehengeGame(Game):
     """
     Game object of StonehengGame.
     """
-    current_state: GameState
+    current_state: "StonehengeState"
+    instruction_string: str
 
     def __init__(self, p1_starts: bool) -> None:
         """
@@ -19,30 +20,39 @@ class StonehengeGame(Game):
         """
         side_length = int(input("Side length of board (1~5)"))
         self.current_state = StonehengeState(p1_starts, side_length)
+        self.instruction_string = "missing instruction"
+
+    def __str__(self) -> str:
+        return ("This is a StonehengeGame with current state "
+                + self.current_state.__str__())
 
     def get_instructions(self) -> str:
         """
-        Return the instructions for this Game.
+        Return the instructions for this game
         """
-        pass
+        return self.instruction_string
 
-    def is_over(self, state: GameState) -> bool:
+    def count_node(self, state: "StonehengeState", check: str) -> int:
+        """
+        A helper function that help check the number of ley line occupied by
+        give check string.
+        """
+        size = len(state.lls[0])  # number of ley line mark in each direction.
+        return sum([
+            int(state.lls[i][j] == check)
+            for i in range(3)
+            for j in range(size)
+        ])
+
+    def is_over(self, state: "StonehengeState") -> bool:
         """
         Return whether or not this game is over at state.
         """
-        size = len(state.lls[0])
-        p1_count = sum([
-            (state.lls[i][j] == "1")
-            for i in range(3)
-            for j in range(size)
-        ])
-        p2_count = sum([
-            (state.lls[i][j] == "2")
-            for i in range(3)
-            for j in range(size)
-        ])
-        return (p1_count >= size / 2
-                or p2_count >= size / 2)
+        total_lls = len(state.lls[0]) * 3  # Total number of ley line.
+        p1_count = self.count_node(state, "1")
+        p2_count = self.count_node(state, "2")
+        return (p1_count >= total_lls / 2
+                or p2_count >= total_lls / 2)
 
     def is_winner(self, player: str) -> bool:
         """
@@ -50,13 +60,21 @@ class StonehengeGame(Game):
 
         Precondition: player is 'p1' or 'p2'.
         """
-        raise NotImplementedError
+        if not self.is_over(self.current_state):
+            return False  # If game not over yet, return False.
+        total_lls = len(self.current_state.lls[0]) * 3
+        check_point = player[-1]  # this would produce "1" for player "p1"
+        # and "2"  for player "p2".
+        return (self.count_node(self.current_state, check_point)
+                >= (total_lls / 2))
 
-    def str_to_move(self, string: str) -> Any:
+    def str_to_move(self, string: str) -> str:
         """
         Return the move that string represents. If string is not a move,
         return some invalid move.
+        Filter applied to the string to an upper case letter.
         """
+        return string.upper()
 
 
 class StonehengeState(GameState):
@@ -134,7 +152,7 @@ class StonehengeState(GameState):
         new_state.lls = self.lls[:]
         ind = new_state.keys[move]
         new_state.graph[ind[0]][ind[1]] = self.get_current_player_name()[-1]
-        #  Check horizontal lines, line 1
+        #  Check horizontal lines, line 0
         for i in range(len(new_state.graph)):
             row = new_state.graph[i]
             row_length = len(row)
@@ -154,6 +172,27 @@ class StonehengeState(GameState):
             if check_1 and check_2:
                 print("Warning!!! Make move conflict")
                 raise Warning("Warning!!! Make move conflict")
+        #  Check left top to right bottom line, line 1.
+        # For the FIRST ley line at order 1.
+        lls_0_count_p1 = (int(new_state.graph[-1][0] == "1")
+                          + int(new_state.graph[-2][0] == "1"))
+        if lls_0_count_p1 >= 1:
+            new_state.lls[1][0] = "1"
+        lls_0_count_p2 = (int(new_state.graph[-1][0] == "2")
+                          + int(new_state.graph[-2][0] == "2"))
+        if lls_0_count_p2 >= 1:
+            new_state.lls[1][0] = "2"
+        # For the LAST ley line at order 1.
+        p1_count = p2_count = total_count = 0
+        for row in new_state.graph[:-1]:
+            p1_count += int(row[-1] == "1")
+            p2_count += int(row[-1] == "2")
+            total_count += 1
+        if p1_count >= total_count / 2:
+            new_state.lls[1][-1] = "1"
+        elif p2_count >= total_count / 2:
+            new_state.lls[1][-1] = "2"
+        for  lls_index in range(1, len(new_state.lls))
         return new_state
 
     def is_valid_move(self, move: Any) -> bool:

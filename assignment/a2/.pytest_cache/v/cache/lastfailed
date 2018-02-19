@@ -1,0 +1,9 @@
+{
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_get_possible_moves_game_over": true,
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_is_over_true": true,
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_is_winner_p1_true": true,
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_get_possible_moves": true,
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_make_move": true,
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_str_one_move": true,
+  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_to_end": true
+}
