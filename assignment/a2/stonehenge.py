@@ -3,8 +3,8 @@ File containing StonehengeState and StonehengeGame
 """
 from game import Game
 from game_state import GameState
-from typing import Dict, List, Any
-from draft_2 import *
+from typing import List, Any
+from helper import illustrate_graph, create_graph, create_keys, get_ley_line_id
 
 
 class StonehengeGame(Game):
@@ -102,24 +102,32 @@ class StonehengeState(GameState):
             ("@ " * (side_length + 1)).split()
             for _ in range(3)
         ]
-        self.keys = dict()
-        for i in range(len(self.graph)):
-            for j in range(len(self.graph[i])):
-                self.keys[self.graph[i][j]] = (i, j)
+        self.keys = create_keys(self.graph)
 
     def __str__(self) -> str:
         """
         Return a string representation of the current state of the game.
         """
-        return illustrate_graph(
-            self.graph,
-            self.lls
-        )
+        return illustrate_graph(self.graph, self.lls)
 
     def get_possible_moves(self) -> list:
         """
         Return all possible moves that can be applied to this state.
         """
+        total_ley_line = len(self.lls[0]) * 3
+        p1_count = sum([
+            int(item == "1")
+            for sublist in self.lls
+            for item in sublist
+        ])
+        p2_count = sum([
+            int(item == "2")
+            for sublist in self.lls
+            for item in sublist
+        ])
+        if p1_count >= total_ley_line / 2 or p2_count >= total_ley_line / 2:
+            # If the game is currently over, return empty possible move list.
+            return []
         return [
             node
             for row in self.graph
@@ -146,56 +154,36 @@ class StonehengeState(GameState):
         )
         assert (
             move.isupper()
-            and move in self.get_possible_moves()
+            # and move in self.get_possible_moves()
         )
-        new_state.graph = self.graph[:]
-        new_state.lls = self.lls[:]
+        new_state.graph = [g[:] for g in self.graph]
+        new_state.lls = [l[:] for l in self.lls]
         ind = new_state.keys[move]
-        new_state.graph[ind[0]][ind[1]] = self.get_current_player_name()[-1]
-        #  Check horizontal lines, line 0
-        for i in range(len(new_state.graph)):
-            row = new_state.graph[i]
-            row_length = len(row)
-            p1_total = sum([
-                int(node == "1") for node in row
-            ])
-            p2_total = sum([
-                int(node == "2") for node in row
-            ])
-            check_1, check_2 = False, False
-            if p1_total >= row_length / 2:
-                new_state.lls[0][i] = 1
-                check_1 = True
-            if p2_total >= row_length / 2:
-                new_state.lls[0][i] = 2
-                check_2 = True
-            if check_1 and check_2:
-                print("Warning!!! Make move conflict")
-                raise Warning("Warning!!! Make move conflict")
-        #  Check left top to right bottom line, line 1.
-        # For the FIRST ley line at order 1.
-        lls_0_count_p1 = (int(new_state.graph[-1][0] == "1")
-                          + int(new_state.graph[-2][0] == "1"))
-        if lls_0_count_p1 >= 1:
-            new_state.lls[1][0] = "1"
-        lls_0_count_p2 = (int(new_state.graph[-1][0] == "2")
-                          + int(new_state.graph[-2][0] == "2"))
-        if lls_0_count_p2 >= 1:
-            new_state.lls[1][0] = "2"
-        # For the LAST ley line at order 1.
-        p1_count = p2_count = total_count = 0
-        for row in new_state.graph[:-1]:
-            p1_count += int(row[-1] == "1")
-            p2_count += int(row[-1] == "2")
-            total_count += 1
-        if p1_count >= total_count / 2:
-            new_state.lls[1][-1] = "1"
-        elif p2_count >= total_count / 2:
-            new_state.lls[1][-1] = "2"
-        for  lls_index in range(1, len(new_state.lls))
+        current_player_flag = self.get_current_player_name()[-1]
+        new_state.graph[ind[0]][ind[1]] = str(current_player_flag)
+        # Update ley line state.
+        for i in range(3):
+            ley_line_id = get_ley_line_id(
+                new_state.lls,
+                i
+            )  # Collection of leyline.
+            # Current_lls_row state collection.
+            for lls_number in range(len(ley_line_id)):
+                current_line_ids = ley_line_id[lls_number]
+                if new_state.lls[i][lls_number] == "@":
+                    # ley line state for current focused line.
+                    current_player_count = sum([
+                        int(new_state.graph
+                            [new_state.keys[value][0]]
+                            [new_state.keys[value][1]]
+                            == current_player_flag)
+                        for value in current_line_ids
+                    ])
+                    if current_player_count >= len(current_line_ids) / 2:
+                        new_state.lls[i][lls_number] = current_player_flag
         return new_state
 
-    def is_valid_move(self, move: Any) -> bool:
+    def is_valid_move(self, move: str) -> bool:
         """
         Return whether move is a valid move for this GameState.
         """
