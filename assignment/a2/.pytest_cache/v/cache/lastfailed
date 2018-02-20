@@ -1,1 +1,9 @@
-{}
+{
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_iterative_stonehenge_one_winning_move": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_iterative_stonehenge_one_winning_move_not_immediate": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_iterative_subtract_square_18": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_iterative_subtract_square_4": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_recursive_stonehenge_one_winning_move_not_immediate": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_recursive_subtract_square_18": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_recursive_subtract_square_4": true
+}
