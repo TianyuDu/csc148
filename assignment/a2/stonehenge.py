@@ -1,9 +1,9 @@
 """
 File containing StonehengeState and StonehengeGame
 """
+from typing import List, Any
 from game import Game
 from game_state import GameState
-from typing import List, Any
 from helper import illustrate_graph, create_graph, create_keys, get_ley_line_id
 
 
@@ -110,7 +110,7 @@ class StonehengeState(GameState):
         """
         return illustrate_graph(self.graph, self.lls)
 
-    def get_possible_moves(self) -> list:
+    def get_possible_moves(self) -> List[str]:
         """
         Return all possible moves that can be applied to this state.
         """
@@ -132,7 +132,7 @@ class StonehengeState(GameState):
             node
             for row in self.graph
             for node in row
-            if node != "1" and node != "2"
+            if (node not in ["1", "2"])
         ]
 
     def get_current_player_name(self) -> str:
@@ -149,7 +149,8 @@ class StonehengeState(GameState):
         Return the GameState that results from applying move to this GameState.
         """
         new_state = StonehengeState(
-            not self.get_current_player_name() == "p1",
+            not (self.get_current_player_name() == "p1"),
+            # Flip the current player.
             self.side_length
         )
         assert (
@@ -204,6 +205,7 @@ class StonehengeState(GameState):
         pass
 
 
-# if __name__ == "__main__":
-# s = StonehengeGame(True)
-# print(s.current_state)
+if __name__ == "__main__":
+    from python_ta import check_all
+
+    check_all(config="a2_pyta.txt")

@@ -35,7 +35,6 @@
       <sourceFolder url="file://$MODULE_DIR$/labs/lab12" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/exercises/ex7" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/exercises/ex6" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/assignment/a1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/assignment/a2" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />

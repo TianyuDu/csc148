@@ -9,8 +9,10 @@ strategy cannot be used on Chopsticks unless you account for infinite loops.
 your own curiousity!)
 """
 # TODO: import the modules needed to make game_interface run.
-from strategy import *
-from typing import Any, Callable
+from strategy import (interactive_strategy,
+                      recursive_minimax_strategy,
+                      iterative_minimax_strategy)
+from typing import Callable
 from subtract_square_game import SubtractSquareGame
 from stonehenge import *
 
@@ -23,8 +25,8 @@ playable_games = {'s': SubtractSquareGame,
 # 'mr' should map to your recursive implementation of minimax while
 # 'mi' should map to your iterative implementation of minimax
 usable_strategies = {'i': interactive_strategy,
-                     'mr': recursive_minimax,
-                     'mi': iterative_minimax}
+                     'mr': recursive_minimax_strategy,
+                     'mi': iterative_minimax_strategy}
 
 
 class GameInterface:

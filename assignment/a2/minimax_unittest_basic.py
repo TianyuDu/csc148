@@ -123,6 +123,7 @@ class MinimaxUnitTests(unittest.TestCase):
         for move in moves_to_make:
             game.current_state = game.current_state.make_move(
                 game.str_to_move(move))
+
         new_state = game.current_state
 
         expected_move = game.str_to_move('E')
