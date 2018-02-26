@@ -32,9 +32,11 @@ def list_all(obj: Union[list, object]) -> list:
     >>> all ([x in [1, 2, 3, 4, 5, 6] for x in list_all(obj)])
     True
     """
-    pass
-
-
+    
+    if not isinstance(obj, list):
+        return [obj]
+    return sum([list_all(sub_obj) for sub_obj in obj], [])
+    
 def max_length(obj: Union[list, object]) -> int:
     """
     Return the maximum length of obj or any of its sublists, if obj is a list.
@@ -47,7 +49,12 @@ def max_length(obj: Union[list, object]) -> int:
     >>> max_length([[1, 2, 3, 3], 4, [4, 5]])
     4
     """
-    pass
+    if not isinstance(obj, list):
+        return 0
+    elif all([not isinstance(sublist, list) for sublist in obj]):
+        return len(obj)
+    else:
+        return max([max_length(sublist) for sublist in obj])
 
 
 def list_over(obj: Union[list, str], n: int) -> List[str]:
@@ -64,7 +71,15 @@ def list_over(obj: Union[list, str], n: int) -> List[str]:
     >>> list_over(["one", "two", "three", "four"], 3)
     ['three', 'four']
     """
-    pass
+    if not isinstance(obj, list):
+        if len(obj) > n:
+            return [obj]
+        else:
+            return []
+    else:
+        return sum([
+            list_over(sub_obj, n) for sub_obj in obj
+            ], [])
 
 
 def list_even(obj: Union[list, int]) -> List[int]:
@@ -85,8 +100,45 @@ def list_even(obj: Union[list, int]) -> List[int]:
     >>> list_even([1, [2, [3, 4]], 5])
     [2, 4]
     """
-    pass
+    if not isinstance(obj, list):
+        if obj % 2 == 0:
+            return [obj]
+        else:
+            return []
+    else:
+        return sum([
+            list_even(sub_obj) for sub_obj in obj
+            ], [])
 
+
+def list_odd(obj: Union[list, int]) -> List[int]:
+    """
+    Return a list of all even integers in obj,
+    or sublists of obj, if obj is a list.  If obj is an even
+    integer, return a list containing obj.  Otherwise return
+    en empty list.
+
+    >>> list_odd(3)
+    [3]
+    >>> list_odd(16)
+    []
+    >>> list_odd([1, 2, 3, 4, 5])
+    [1, 3, 5]
+    >>> list_odd([1, 2, [3, 4], 5])
+    [1, 3, 5]
+    >>> list_odd([1, [2, [3, 4]], 5])
+    [1, 3, 5]
+    """
+    if not isinstance(obj, list):
+        if obj % 2 == 1:
+            return [obj]
+        else:
+            return []
+    else:
+        return sum([
+            list_odd(x) for x in obj
+            ], [])
+        
 
 def count_even(obj: Union[list, int]) -> int:
     """
@@ -101,7 +153,37 @@ def count_even(obj: Union[list, int]) -> int:
     >>> count_even([1, 2, [3, 4], 5])
     2
     """
-    pass
+    count = 0
+    if not isinstance(obj, list):
+        return int(obj % 2 == 0)
+    else:
+        count += sum(00000
+            [count_even(sublist) for sublist in obj]
+            )
+    return count
+    
+
+def count_odd(obj: Union[list, int]) -> int:
+    """
+    Return the number of even numbers in obj or sublists of obj
+    if obj is a list.  Otherwise, if obj is a number, return 1
+    if it is an even number and 0 if it is an odd number.
+
+    >>> count_odd(3)
+    1
+    >>> count_odd(16)
+    0
+    >>> count_odd([1, 2, [3, 4], 5])
+    3
+    """
+    count = 0
+    if not isinstance(obj, list):
+        return int(obj % 2 == 1)
+    else:
+        count += sum(
+            [count_odd(sublist) for sublist in obj]
+            )
+    return count
 
 
 def count_all(obj: Union[list, object]) -> int:
@@ -116,7 +198,14 @@ def count_all(obj: Union[list, object]) -> int:
     >>> count_all([17, [17, 5], 3])
     4
     """
-    pass
+    count = 0
+    if not isinstance(obj, list):
+        return 1
+    else:
+        count += sum(
+            [count_all(subobj) for subobj in obj]
+            )
+    return count
 
 
 def count_above(obj: Union[list, int], n: int) -> int:
@@ -134,4 +223,16 @@ def count_above(obj: Union[list, int], n: int) -> int:
     >>> count_above([17, 18, [19, 20]], 18)
     2
     """
-    pass
+    #  Accoring to DocStringExample, the above is strict.
+    count = 0
+    if not isinstance(obj, list):
+        count += int(obj > n)
+    else:
+        count += sum(
+            [count_above(subobj, n) for subobj in obj]
+            )
+    return count
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
