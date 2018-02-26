@@ -38,7 +38,7 @@ STONEHENGE_MINIMAX_BOARD = """\
      / \\ / \\ / \\ /
 2 - 2 - 2 - H - 2
      \\ / \\ / \\ / \\
-  @ - J - K - L   1
+  @ - J - 2 - L   1
        \\   \\   \\
         2   2   1
 """
@@ -82,7 +82,7 @@ class MinimaxUnitTests(unittest.TestCase):
                          "SubtractSquare with " +
                          "a value of {} should result in a move in {} " +
                          "being returned, but {} was returned instead.").format(
-                            6, expected_moves, move_chosen
+                            18, expected_moves, move_chosen
                          ))
 
     def test_iterative_stonehenge_one_winning_move(self):
@@ -92,15 +92,15 @@ class MinimaxUnitTests(unittest.TestCase):
         """
 
         with patch('builtins.input', return_value='3'):
-            game = StonehengeGame(True)
+            game = StonehengeGame(False)
 
-        moves_to_make = ['A', 'C', 'B', 'F', 'E', 'G', 'D', 'I']
+        moves_to_make = ['K', 'A', 'C', 'B', 'F', 'E', 'G', 'D', 'I']
         for move in moves_to_make:
             game.current_state = game.current_state.make_move(
                 game.str_to_move(move))
 
         move_chosen = minimax_iterative_strategy(game)
-        expected_moves = [game.str_to_move("H"), game.str_to_move("K")]
+        expected_moves = [game.str_to_move("H")]
         self.assertTrue(move_chosen in expected_moves,
                         ("Calling iterative minimax on a game of Stonehenge" +
                          " with " +
@@ -123,7 +123,6 @@ class MinimaxUnitTests(unittest.TestCase):
         for move in moves_to_make:
             game.current_state = game.current_state.make_move(
                 game.str_to_move(move))
-
         new_state = game.current_state
 
         expected_move = game.str_to_move('E')
@@ -176,7 +175,7 @@ class MinimaxUnitTests(unittest.TestCase):
                          "SubtractSquare with " +
                          "a value of {} should result in a move in {} " +
                          "being returned, but {} was returned instead.").format(
-                            6, expected_moves, move_chosen
+                            18, expected_moves, move_chosen
                         ))
 
     def test_recursive_stonehenge_one_winning_move(self):
@@ -186,15 +185,15 @@ class MinimaxUnitTests(unittest.TestCase):
         """
 
         with patch('builtins.input', return_value='3'):
-            game = StonehengeGame(True)
+            game = StonehengeGame(False)
 
-        moves_to_make = ['A', 'C', 'B', 'F', 'E', 'G', 'D', 'I']
+        moves_to_make = ['K', 'A', 'C', 'B', 'F', 'E', 'G', 'D', 'I']
         for move in moves_to_make:
             game.current_state = game.current_state.make_move(
                 game.str_to_move(move))
 
         move_chosen = minimax_recursive_strategy(game)
-        expected_moves = [game.str_to_move("H"), game.str_to_move("K")]
+        expected_moves = [game.str_to_move("H")]
         self.assertTrue(move_chosen in expected_moves,
                         (
                         "Calling recursive minimax on a game of Stonehenge" +
@@ -232,6 +231,7 @@ class MinimaxUnitTests(unittest.TestCase):
                          "but got {} instead.\n{}").format(
                              expected_move, move_chosen, str(new_state)
                          ))
+
 
 if __name__ == "__main__":
     unittest.main()

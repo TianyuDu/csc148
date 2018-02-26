@@ -190,12 +190,16 @@ class StonehengeState(GameState):
         """
         return move in self.get_possible_moves()
 
-    def __repr__(self) -> Any:
+    def __repr__(self) -> str:
         """
         Return a representation of this state (which can be used for
         equality testing).
         """
-        print(self.__str__())
+        return (
+            "current player: {}\n".format(self.get_current_player_name()) +
+            "current board:\n " +
+            self.__str__()
+        )
 
     def rough_outcome(self) -> float:
         """
