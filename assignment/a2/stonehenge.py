@@ -1,7 +1,7 @@
 """
 File containing StonehengeState and StonehengeGame
 """
-from typing import List, Any
+from typing import List
 from game import Game
 from game_state import GameState
 from helper import illustrate_graph, create_graph, create_keys, get_ley_line_id
@@ -201,15 +201,64 @@ class StonehengeState(GameState):
             self.__str__()
         )
 
+    def is_winner(self, player: str) -> bool:
+        total_lls = len(self.lls[0]) * 3
+        check_point = player[-1]  # this would produce "1" for player "p1"
+        # and "2"  for player "p2".
+        return (self.count_node(check_point)
+                >= (total_lls / 2))
+
+    def count_node(self, check: str):
+        size = len(self.lls[0])  # number of ley line mark in each direction.
+        return sum([
+            int(self.lls[i][j] == check)
+            for i in range(3)
+            for j in range(size)
+        ])
+
     def rough_outcome(self) -> float:
         """
         Return an estimate in interval [LOSE, WIN] of best outcome the current
         player can guarantee from state self.
         """
-        pass
+        possible_moves = self.get_possible_moves()
+        current_player = self.get_current_player_name()
+        if current_player == "p1":
+            oppoosite_player = "p2"
+        else:
+            oppoosite_player = "p1"
+
+        if self.is_winner(current_player):
+            return 1.0
+        elif self.is_winner(oppoosite_player):
+            return -1.0
+
+        total_moves = len(possible_moves)
+        fail = 0
+        for move in possible_moves:
+            new_state = self.make_move(move)
+            if new_state.is_winner(current_player):
+                return 1.0  # Case1, at least one move leads to win.
+            else:
+                next_result = []
+                for move2 in new_state.get_possible_moves():
+                    new_state_2 = new_state.make_move(move2)
+                    next_result.append(
+                        new_state_2.is_winner(oppoosite_player)
+                    )
+                if all(next_result):  # If this move would lead to
+                    #  a state that no matter what move the opposite player
+                    #  make, opposite player wins, then this move is a
+                    #  definitely failing move, which leads to definite
+                    #  loss, and therefore should not be select. DEAD MOVE.
+                    fail += 1  # Count the dead move.
+
+        if fail == total_moves:
+            return -1.0
+        return fail / total_moves * - 2 + 1.0  # If no dead move, would return
+        # 1.0, if all dead move, would return -1.0, linear estimation.
 
 
 if __name__ == "__main__":
     from python_ta import check_all
-
     check_all(config="a2_pyta.txt")

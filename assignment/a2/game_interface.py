@@ -1,6 +1,6 @@
 """
 The module used to play our games.
-Please fill in the TODO's (i.e. importing games and strategies as needed)
+Please fill in the
 
 Note: You do not have to run python_ta on this file.
 You may import your games from A1 (i.e. Chopsticks). However, the minimax
@@ -8,23 +8,20 @@ strategy cannot be used on Chopsticks unless you account for infinite loops.
 (You do not have to worry about this for the assignment: only do it for
 your own curiousity!)
 """
-# TODO: import the modules needed to make game_interface run.
-from strategy import (interactive_strategy,
-                      recursive_minimax_strategy,
-                      iterative_minimax_strategy)
-from typing import Callable
+from strategy import *
+from typing import Callable, Any
 from subtract_square_game import SubtractSquareGame
 from stonehenge import *
 
-# TODO: Replace None with the corresponding class name for your games.
+
 # 'h' should map to Stonehenge.
 playable_games = {'s': SubtractSquareGame,
                   'h': StonehengeGame}
 
-# TODO: Replace None with the corresponding function names for your strategies.
 # 'mr' should map to your recursive implementation of minimax while
 # 'mi' should map to your iterative implementation of minimax
 usable_strategies = {'i': interactive_strategy,
+                     'ro': rough_outcome_strategy,
                      'mr': recursive_minimax_strategy,
                      'mi': iterative_minimax_strategy}
 

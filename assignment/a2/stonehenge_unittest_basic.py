@@ -634,29 +634,29 @@ class StonehengeUnitTests(unittest.TestCase):
         """
         with patch('builtins.input', return_value='2'):
             game_1 = StonehengeGame(True)
-        
-    
+
+
         with patch('builtins.input', return_value='2'):
             game_2 = StonehengeGame(False)
-         
-        
+
+
         # Apply the moves A -> G to the initial state of game 1 (which starts
         # with player 1)
         game_1_state = game_1.current_state
         game_1_state = game_1_state.make_move(game_1.str_to_move("A"))
         game_1_state = game_1_state.make_move(game_1.str_to_move("G"))
-        
+
 
         # Apply the moves G -> A to the initial state of game 2 (which starts
         # with player 2)
         game_2_state = game_2.current_state
         game_2_state = game_2_state.make_move(game_2.str_to_move("G"))
         game_2_state = game_2_state.make_move(game_2.str_to_move("A"))
-        
+
         self.assertNotEqual(repr(game_1_state), repr(game_2_state),
                             "2 states that have the same values but different" +
                             " players should return different __repr__s.")
-    
+
     @patch('builtins.input', side_effect = ['2'])
     def test_stonehenge_repr_same_players_same_value(self, input):
         """
@@ -666,7 +666,7 @@ class StonehengeUnitTests(unittest.TestCase):
         """
         game = StonehengeGame(True)
         initial_state = game.current_state
-        
+
         # Apply the moves A -> G -> B to the initial state
         state_1 = initial_state.make_move(game.str_to_move("A"))
         state_1 = state_1.make_move(game.str_to_move("G"))
@@ -681,8 +681,8 @@ class StonehengeUnitTests(unittest.TestCase):
                          "2 states that have the same values and the same " +
                          "current player but which were reached differently " +
                          "should return the same __repr__.")
-        
-    
+
+
     @patch('builtins.input', side_effect = ['1'])
     def test_stonehenge_rough_outcome_state_over(self, input):
         """
@@ -692,7 +692,7 @@ class StonehengeUnitTests(unittest.TestCase):
         game = StonehengeGame(True)
         new_state = game.current_state.make_move("A")
         ro = new_state.rough_outcome()
-        
+
         self.assertEqual(ro, -1,
                          "rough_outcome() should return -1 for a state that " +
                          "is over an where the current player at that state " +
@@ -706,17 +706,17 @@ class StonehengeUnitTests(unittest.TestCase):
         """
         game = StonehengeGame(True)
         new_state = game.current_state
-        
+
         moves_to_make = ["A", "B"]
         for move in moves_to_make:
-            new_state = new_state.make_move(game.str_to_move(move))        
-    
+            new_state = new_state.make_move(game.str_to_move(move))
+
         ro = new_state.rough_outcome()
 
         self.assertEqual(ro, 1,
                          ("rough_outcome() should return 1 for a state where " +
                           "there is a move that will lead to the the current " +
-                          "player winning immediately but {} was returned " + 
+                          "player winning immediately but {} was returned " +
                           "instead.").format(ro))
 
     @patch('builtins.input', side_effect = ['2'])
@@ -727,18 +727,18 @@ class StonehengeUnitTests(unittest.TestCase):
         """
         game = StonehengeGame(True)
         new_state = game.current_state
-        
+
         moves_to_make = ["D", "A", "C", "E", "G"]
         for move in moves_to_make:
-            new_state = new_state.make_move(game.str_to_move(move))        
-    
+            new_state = new_state.make_move(game.str_to_move(move))
+
         ro = new_state.rough_outcome()
 
         self.assertEqual(ro, -1,
                          ("rough_outcome() should return -1 for a state where" +
                           " all moves will result in states where the other " +
-                          "player can immediately win but {} was returned " + 
+                          "player can immediately win but {} was returned " +
                           "instead.").format(ro))
-        
+
 if __name__ == "__main__":
     unittest.main()

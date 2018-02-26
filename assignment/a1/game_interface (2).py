@@ -1,5 +1,5 @@
 # TODO: import the modules needed to make game_interface run.
-from strategy import *
+from strategy_old import *
 from typing import List, Any, Callable, Dict
 
 
@@ -466,7 +466,7 @@ class SubstractSquareState(State):
 playable_games = {'s': SubstractSquare,
                   'c': ChopSticks}
 
-# The strategies you are to implement.  See strategy.py, and then decide
+# The strategies you are to implement.  See strategy_old.py, and then decide
 # how to modify this.
 usable_strategies = {'r': random_strategy,
                      'i': interactive_strategy}

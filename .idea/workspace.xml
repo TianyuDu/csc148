@@ -5,12 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/assignment/a2/strategy_old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/Archive/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/Archive/game_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/Clean_chopsticks_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/Clean_chopsticks_unittest_subset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/Clean_subtractsquare_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/Clean_subtractsquare_unittest_subset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface (2).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset (1).py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment/a2/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/.pytest_cache/v/cache/lastfailed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/a2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/a2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/game_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/game_interface_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/game_interface_old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment/a2/stonehenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/stonehenge.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment/a2/strategy_new.py" beforeDir="false" />
     </list>
     <ignored path="csc148.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,10 +61,10 @@
     <SUITE FILE_PATH="coverage/csc148$game_interface.coverage" NAME="game_interface Coverage Results" MODIFIED="1519083992635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment/a2" />
     <SUITE FILE_PATH="coverage/csc148$Doctest__columns.coverage" NAME="Doctest _columns Coverage Results" MODIFIED="1518053578536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lecture" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList___eq__.coverage" NAME="Doctest LinkedList.__eq__ Coverage Results" MODIFIED="1517691983252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab/lab4" />
-    <SUITE FILE_PATH="coverage/csc148$py_test_in_minimax_unittest_basic_py.coverage" NAME="py.test in minimax_unittest_basic.py Coverage Results" MODIFIED="1519608191452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment/a2" />
+    <SUITE FILE_PATH="coverage/csc148$py_test_in_minimax_unittest_basic_py.coverage" NAME="py.test in minimax_unittest_basic.py Coverage Results" MODIFIED="1519609156457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment/a2" />
     <SUITE FILE_PATH="coverage/csc148$py_test_for_stonehenge_unittest_basic_StonehengeUnitTests_test_get_possible_moves_game_over.coverage" NAME="py.test for stonehenge_unittest_basic.StonehengeUnitTests.test_get_possible_moves_game_over Coverage Results" MODIFIED="1519092978826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment/a2" />
     <SUITE FILE_PATH="coverage/csc148$Doctest_LinkedList___add__.coverage" NAME="Doctest LinkedList.__add__ Coverage Results" MODIFIED="1517690697677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab/lab4" />
-    <SUITE FILE_PATH="coverage/csc148$py_test_in_stonehenge_unittest_basic_py.coverage" NAME="py.test in stonehenge_unittest_basic.py Coverage Results" MODIFIED="1519608119384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment/a2" />
+    <SUITE FILE_PATH="coverage/csc148$py_test_in_stonehenge_unittest_basic_py.coverage" NAME="py.test in stonehenge_unittest_basic.py Coverage Results" MODIFIED="1519610006563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/assignment/a2" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -58,57 +73,12 @@
     <favorites_list name="csc148" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game_state.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/game_state.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-399">
-              <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game_interface.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/game_interface.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="stonehenge.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2955">
-              <caret line="204" column="11" lean-forward="true" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="minimax_unittest_basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stonehenge_unittest_basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2365">
-              <caret line="641" column="8" lean-forward="true" selection-start-line="641" selection-start-column="8" selection-end-line="641" selection-end-column="8" />
+            <state relative-caret-position="81">
+              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -116,8 +86,8 @@
       <file leaf-file-name="strategy.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+            <state relative-caret-position="37">
+              <caret line="223" column="11" lean-forward="true" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -133,7 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>test_subtractsquare_str</find>
       <find>test_subtractsquare_get_possible_moves</find>
       <find>extract_subtract_square_value</find>
       <find>is_winner</find>
@@ -163,6 +132,7 @@
       <find>get_ley_line_id</find>
       <find>make_move</find>
       <find>get_possible_moves</find>
+      <find>rough</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -196,8 +166,10 @@
         <option value="$PROJECT_DIR$/assignment/a2/draft_3.py" />
         <option value="$PROJECT_DIR$/assignment/a2/helper.py" />
         <option value="$PROJECT_DIR$/assignment/a2/draft.py" />
-        <option value="$PROJECT_DIR$/assignment/a2/game_interface.py" />
         <option value="$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py" />
+        <option value="$PROJECT_DIR$/assignment/a2/strategy_new.py" />
+        <option value="$PROJECT_DIR$/assignment/a2/game_interface_new.py" />
+        <option value="$PROJECT_DIR$/assignment/a2/game_interface.py" />
         <option value="$PROJECT_DIR$/assignment/a2/stonehenge.py" />
         <option value="$PROJECT_DIR$/assignment/a2/strategy.py" />
       </list>
@@ -329,7 +301,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in minimax_unittest_basic.py">
+  <component name="RunManager" selected="Python.strategy">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -349,7 +321,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="game_interface" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="game_interface (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -368,7 +340,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="minimax_unittest_basic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="stonehenge" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -381,7 +353,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignment/a2/stonehenge.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -655,19 +627,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
-      <item itemvalue="Python.minimax_unittest_basic" />
       <item itemvalue="Python tests.py.test in stonehenge_unittest_basic.py" />
-      <item itemvalue="Python.strategy" />
-      <item itemvalue="Python.game_interface" />
       <item itemvalue="Python tests.py.test in minimax_unittest_basic.py" />
+      <item itemvalue="Python.game_interface (1)" />
+      <item itemvalue="Python.stonehenge" />
+      <item itemvalue="Python.strategy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.py.test in minimax_unittest_basic.py" />
-        <item itemvalue="Python tests.py.test in stonehenge_unittest_basic.py" />
-        <item itemvalue="Python.minimax_unittest_basic" />
-        <item itemvalue="Python.game_interface" />
         <item itemvalue="Python.strategy" />
+        <item itemvalue="Python.stonehenge" />
+        <item itemvalue="Python.game_interface (1)" />
+        <item itemvalue="Python tests.py.test in stonehenge_unittest_basic.py" />
+        <item itemvalue="Python tests.py.test in minimax_unittest_basic.py" />
       </list>
     </recent_temporary>
   </component>
@@ -685,35 +657,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.02.20 at 17h 07m 54s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.20 at 17h 08m 18s.xml">
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 39m 45s.xml">
       <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.20 at 17h 18m 29s.xml">
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 41m 19s.xml">
       <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 01h 33m 46s.xml">
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 43m 19s.xml">
       <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 01h 34m 03s.xml">
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 45m 50s.xml">
       <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.02.25 at 01h 34m 22s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 01h 34m 29s.xml">
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 46m 15s.xml">
       <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 22m 02s.xml">
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 46m 22s.xml">
       <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.02.25 at 20h 22m 11s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 46m 50s.xml">
+      <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.02.25 at 20h 23m 03s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 48m 39s.xml">
+      <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 51m 33s.xml">
+      <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_stonehenge_unittest_basic_py - 2018.02.25 at 20h 53m 28s.xml">
+      <configuration name="py.test in stonehenge_unittest_basic.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -734,11 +706,12 @@
       <window_info anchor="right" x="0" y="0" width="430" height="1000" id="Documentation" order="12" sideWeight="0.61290324" side_tool="true" weight="0.3088392" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3288719" />
       <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.2829828" />
-      <window_info active="true" anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" visible="true" weight="0.33944955" />
+      <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" weight="0.47247708" />
       <window_info anchor="right" id="Terminal" order="7" show_stripe_button="false" side_tool="true" weight="0.32977304" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.16027689" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
+      <window_info anchor="right" id="Find" order="4" weight="0.32960597" />
       <window_info anchor="right" id="SciView" order="10" sideWeight="0.38709676" weight="0.32850778" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info x="-96" y="763" width="3100" height="478" id="Favorites" order="3" sideWeight="0.5045208" side_tool="true" weight="0.11661342" />
@@ -753,7 +726,6 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32977304" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Find" order="4" weight="0.3297062" />
       <window_info anchor="right" id="Data View" order="11" />
     </layout>
     <layout-to-restore>
@@ -895,20 +867,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assignment/a1/game_interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4334">
-          <caret line="197" column="31" lean-forward="true" selection-start-line="197" selection-start-column="31" selection-end-line="197" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a1/draft.py" />
     <entry file="file://$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1144,6 +1102,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/game_state.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="696" column="75" selection-start-line="696" selection-start-column="75" selection-end-line="696" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -1151,38 +1123,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
+    <entry file="file://$PROJECT_DIR$/assignment/a2/strategy_old.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2365">
-          <caret line="641" column="8" lean-forward="true" selection-start-line="641" selection-start-column="8" selection-end-line="641" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="204" column="11" lean-forward="true" selection-start-line="204" selection-start-column="11" selection-end-line="204" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/game_state.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        <state relative-caret-position="623">
+          <caret line="178" column="16" lean-forward="true" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/game_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="-2253">
+          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/game_interface_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1841">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="132" column="36" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
+        <state relative-caret-position="37">
+          <caret line="223" column="11" lean-forward="true" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
         </state>
       </provider>
     </entry>

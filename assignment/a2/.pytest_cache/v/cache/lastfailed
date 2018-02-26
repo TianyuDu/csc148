@@ -1,5 +1,1 @@
-{
-  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_rough_outcome_other_player_winning_moves": true,
-  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_rough_outcome_state_over": true,
-  "stonehenge_unittest_basic.py::StonehengeUnitTests::test_stonehenge_rough_outcome_winning_move_immediate": true
-}
+{}

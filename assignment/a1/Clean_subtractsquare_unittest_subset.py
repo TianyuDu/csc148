@@ -4,7 +4,7 @@ from unittest.mock import patch
 import re
 
 # Import the student solution
-from game_interface import playable_games
+from game_interface_old import playable_games
 SubtractSquareGame = playable_games['s']
 
 SUBTRACT_SQUARE_FORMAT = ".*(?<=[^0-9])([0-9]+)"

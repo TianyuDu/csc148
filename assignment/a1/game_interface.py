@@ -3,7 +3,7 @@ revision 3
 The main control file for the game.
 """
 
-from strategy import *
+from strategy_old import *
 from typing import Any, Callable
 from game import *
 
@@ -13,7 +13,7 @@ from game import *
 playable_games = {'s': SubstractSquare,
                   'c': ChopSticks}
 
-# The strategies you are to implement.  See strategy.py, and then decide
+# The strategies you are to implement.  See strategy_old.py, and then decide
 # how to modify this.
 usable_strategies = {'r': random_strategy,
                      'i': interactive_strategy}

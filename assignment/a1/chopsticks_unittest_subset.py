@@ -4,7 +4,7 @@ from unittest.mock import patch
 import re
 
 # Import the student solution
-from game_interface import playable_games
+from game_interface_old import playable_games
 ChopsticksGame = playable_games['c']
 
 # A very ugly regex which searches for a version of:
