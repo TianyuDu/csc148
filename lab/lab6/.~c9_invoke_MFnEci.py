@@ -89,13 +89,7 @@ def list_internal(t: Tree) -> list:
     >>> L
     [0, 1, 2]
     """
-    if t.children == []:  # The leaf case
-        return []
-    else:
-        return [t.value] + gather_lists([
-            list_internal(c)
-            for c in t.children
-            ])
+    pass
 
 
 def count_internal(t: Tree) -> int:
@@ -112,10 +106,10 @@ def count_internal(t: Tree) -> int:
     if t.children == []:
     	return 0
     else:
-        return 1 + sum([
-        	count_internal(c)
-        	for c in t.children
-        	])
+    	return 1 + sum([
+    		count_internal(c)
+    		for c in self.children
+    		])
 
 
 def count_leaves(t: Tree) -> int:
@@ -129,13 +123,7 @@ def count_leaves(t: Tree) -> int:
     >>> count_leaves(t)
     6
     """
-    if t.children == []:
-        return 1
-    else:
-        return sum([
-            count_leaves(c)
-            for c in t.children
-            ])
+
 
 def sum_internal(t: Tree) -> int:
     """
@@ -150,13 +138,7 @@ def sum_internal(t: Tree) -> int:
     >>> sum_internal(t)
     6
     """
-    if t.children == []:
-        return 0
-    else:
-        return t.value + sum([
-            sum_internal(c)
-            for c in t.children
-            ])
+    pass
 
 
 def sum_leaves(t: Tree) -> int:
@@ -169,13 +151,7 @@ def sum_leaves(t: Tree) -> int:
     >>> sum_leaves(t)
     39
     """
-    if t.children == []:
-        return t.value
-    else:
-        return sum([
-            sum_leaves(c)
-            for c in t.children
-            ])
+    pass
 
 
 def arity(t: Tree) -> int:
@@ -183,23 +159,14 @@ def arity(t: Tree) -> int:
     Return the maximum branching factor (arity) of Tree t.
 
     >>> t = Tree(23)
-    >>> arity(t)
-    0
+1    0
     >>> tn2 = Tree(2, [Tree(4), Tree(4.5), Tree(5), Tree(5.75)])
     >>> tn3 = Tree(3, [Tree(6), Tree(7)])
     >>> tn1 = Tree(1, [tn2, tn3])
     >>> arity(tn1)
     4
     """
-    # if t.children == []:
-    #     return 0
-    # else:
-    return max(
-        [len(t.children)] + 
-        [
-        arity(c)
-        for c in t.children
-        ])
+    pass
 
 
 def contains_test_passer(t: Tree, test: Callable[[Any], bool]) -> bool:
@@ -214,15 +181,7 @@ def contains_test_passer(t: Tree, test: Callable[[Any], bool]) -> bool:
     >>> contains_test_passer(t, even)
     True
     """
-    # if t.children == []:
-    #     return test(t.value)
-    # else:
-    return any(
-        [test(t.value)] +
-        [
-        contains_test_passer(c, test)
-        for c in t.children
-        ])
+    pass
 
 
 def list_if(t: Tree, p: Callable[[Any], bool]) -> list:
@@ -241,14 +200,7 @@ def list_if(t: Tree, p: Callable[[Any], bool]) -> list:
     >>> set(list_) == {0, 2, 4, 6, 8}
     True
     """
-    self_ = [t.value] if p(t.value) else []
-    if t.children == []:
-        return self_
-    else:
-        return gather_lists([
-            self_ + list_if(c, p)
-            for c in t.children
-            ]) 
+    pass
 
 
 # helper function that may be useful in the functions
@@ -297,7 +249,7 @@ def descendants_from_list(t: Tree, list_: list, branching: int) -> Tree:
 
 
 if __name__ == '__main__':
-    # import python_ta
-    # python_ta.check_all()
+    import python_ta
+    python_ta.check_all()
     import doctest
     doctest.testmod()
