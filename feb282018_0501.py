@@ -22,6 +22,18 @@ def levelorder_visit(t: Tree, act: Callable[[Tree], Any]) -> None:
             to_act.add(child)
 
 
+def visit_level(t: Tree, act: Callable[[Tree], Any], n: int) -> int:
+    """
+    """
+    if n == 1:
+        act(t)
+        return 1
+    else:
+        return sum([
+            visit_level(child, act, n - 1)
+            for child in t.children])
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod
