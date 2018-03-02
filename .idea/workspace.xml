@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assignment/a2/strategy_old.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/Archive/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/Archive/game_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/Clean_chopsticks_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/Clean_chopsticks_unittest_subset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/Clean_subtractsquare_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/Clean_subtractsquare_unittest_subset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/chopsticks_unittest_subset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface (2).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface (2).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/game_interface_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/game_interface_old.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset (1).py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset (1).py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/.pytest_cache/v/cache/lastfailed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/game_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/game_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/game_interface_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/game_interface_old.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/stonehenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/stonehenge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/strategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/strategy_new.py" beforeDir="false" />
     </list>
     <ignored path="csc148.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +53,7 @@
     <favorites_list name="csc148" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="stonehenge.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,8 +66,8 @@
       <file leaf-file-name="strategy.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="223" column="11" lean-forward="true" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
+            <state relative-caret-position="236">
+              <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -188,9 +168,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="98" />
     <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="height" value="1102" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -237,7 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,6 +245,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.strategy">
+  <component name="RunManager" selected="Python.game_interface (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -635,9 +616,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.game_interface (1)" />
         <item itemvalue="Python.strategy" />
         <item itemvalue="Python.stonehenge" />
-        <item itemvalue="Python.game_interface (1)" />
         <item itemvalue="Python tests.py.test in stonehenge_unittest_basic.py" />
         <item itemvalue="Python tests.py.test in minimax_unittest_basic.py" />
       </list>
@@ -698,20 +679,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="98" width="1920" height="1102" extended-state="0" />
     <layout>
       <window_info anchor="right" id="TODO" order="5" sideWeight="0.50448143" side_tool="true" weight="0.20607029" />
       <window_info anchor="right" id="Event Log" order="9" show_stripe_button="false" side_tool="true" />
-      <window_info anchor="right" x="0" y="0" width="430" height="1000" id="Documentation" order="12" sideWeight="0.61290324" side_tool="true" weight="0.3088392" />
+      <window_info anchor="right" x="0" y="0" width="430" height="902" id="Documentation" order="12" sideWeight="0.61290324" side_tool="true" visible="true" weight="0.3088392" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3288719" />
       <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.2829828" />
-      <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" weight="0.47247708" />
+      <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" weight="0.47216496" />
       <window_info anchor="right" id="Terminal" order="7" show_stripe_button="false" side_tool="true" weight="0.32977304" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.16027689" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.16347177" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
-      <window_info anchor="right" id="Find" order="4" weight="0.32960597" />
       <window_info anchor="right" id="SciView" order="10" sideWeight="0.38709676" weight="0.32850778" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info x="-96" y="763" width="3100" height="478" id="Favorites" order="3" sideWeight="0.5045208" side_tool="true" weight="0.11661342" />
@@ -726,6 +705,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32977304" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Find" order="4" weight="0.32960597" />
       <window_info anchor="right" id="Data View" order="11" />
     </layout>
     <layout-to-restore>
@@ -1153,8 +1133,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="223" column="11" lean-forward="true" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
+        <state relative-caret-position="236">
+          <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
         </state>
       </provider>
     </entry>
