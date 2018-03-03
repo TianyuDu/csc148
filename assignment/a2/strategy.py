@@ -166,8 +166,8 @@ def iterative_minimax_strategy(game: Game) -> str:
                 else:  # If the exam_node.children is non-empty, means we
                     # have explored this node bef ore and all of it's children
                     # should have been scored.
-                    exam_node.score = exam_node.calculate_score()
-    scores = [root.calculate_score() for root in trees]
+                    exam_node.score = exam_node.get_max_score()
+    scores = [root.get_move_score() for root in trees]
     # scores = max([root.score for root in trees])
     assert len(scores) == len(candidate_moves), "Inconsistent length."
     max_idx = scores.index(max(scores))
@@ -196,9 +196,27 @@ class TreeNode:
             for child in self.children
         ])
 
-    def get_high_score(self):
-        assert self.children != [], "This TreeNode is leaf and has no child."
-        return max([
+
+    def get_move_score(self):
+        if self.children == []:
+            assert self.score is not None
+            return self.score
+        if all([
+            child_node.score == 1
+            for child_node in self.children
+        ]):
+            return 1
+        elif all([
+            child_node.score == -1
+            for child_node in self.children
+        ]):
+            return -1
+        else:
+            return 0
+
+    def get_max_score(self):
+        #  assert self.children != [], "This TreeNode is leaf and has no child."
+        return max([-1] + [
             child.score
             for child in self.children
         ])  # We don't have to concern the case
