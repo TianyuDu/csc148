@@ -120,91 +120,15 @@ def iterative_minimax_strategy(game: Game) -> str:
                     exam_node.add_child(child_node)
                     stack.append(child_node)
             else:
-                child_scores = exam_node.get_child_scores()
-                minus_scores = [-1 * s for s in child_scores]
-                exam_node.score = max(minus_scores)
+                # child_scores = exam_node.get_child_scores()
+                # minus_scores = [-1 * s for s in child_scores]
+                # # Calculate the highest minus score.
+                # exam_node.score = max(minus_scores)
+                exam_node.score = exam_node.get_max_neg_child_val()
     # scores = [root.get_min_score() for root in trees]
     # # scores = max([root.score for root in trees])
     # assert len(scores) == len(candidate_moves), "Inconsistent length."
-    max_idx = root.get_max_child_idx()
-    return candidate_moves[max_idx]
-
-
-def iterative_minimax_strategy_2(game: Game) -> str:
-    """
-    Doc String Omitted.
-    """
-    state = game.current_state
-    candidate_moves = game.current_state.get_possible_moves()
-    our_player = game.current_state.get_current_player_name()
-    if our_player == "p1":
-        oppo_player = "p2"
-    else:
-        oppo_player = "p1"
-    trees = [
-        TreeNode(state.make_move(move))
-        for move in candidate_moves
-    ]  # Create tree nodes for candidate moves.
-    #  So that we have tree roots for each canddiate move.
-    for root in trees:  # We focus on the tree of each candidate move tryin to
-        # calculate their score
-        # stack = [
-        #     TreeNode(root.state.make_move(move))
-        #     for move in root.state.get_possible_moves()
-        # ]
-        #
-        # if game.is_over(root.state):
-        #     game.current_state = root.state
-        #     if game.is_winner(current_player):
-        #         root.score = 1
-        #     else:
-        #         root.score = -1
-        #     continue
-        # for sub in stack:
-        #     root.add_child(sub)
-        stack = [root]  # Create current stack.
-        while stack != []:
-            exam_node = stack.pop()  # Take out the last node.
-            # If current node representing a game-over state.
-            if game.is_over(exam_node.state):
-                game.current_state = exam_node.state  # Assign state to game,
-                # So that game could exam..
-                if game.is_winner(our_player):
-                    exam_node.score = 1  # OUR player is the winner.
-                elif game.is_winner(oppo_player):
-                    exam_node.score = -1  # if the OPPONENT player is the winner
-            # Else, if the current representing a state that NOT over yet.
-            else:
-                if exam_node.children == []:
-                    # If the current node has NOT been explored yet.
-                    # Create a tree structure branching
-                    # out all accessible states.
-                    possible_moves = exam_node.state.get_possible_moves()
-                    stack.append(exam_node)
-                    for move in possible_moves:
-                        child_node = TreeNode(
-                            state=exam_node.state.make_move(move))
-                        exam_node.add_child(child_node)
-                        stack.append(child_node)
-                        # Create TreeNode containing all accessible moves, and
-                        # add them to the children of current TreeNode.
-
-                    # stack.append(exam_node)
-                    # # Add current PARENT back to stack.
-                    # for child in exam_node.children:
-                    #     stack.append(child)
-
-                        # Add each children to the stack AFTER the parent node
-                else:  # If the exam_node.children is non-empty, means we
-                    # have explored this node bef ore and all of it's children
-                    # should have been scored.
-                    child_scores = exam_node.get_child_scores()
-                    minus_scores = [-1 * s for s in child_scores]
-                    exam_node.score = max(minus_scores)
-    scores = [root.get_move_score() for root in trees]
-    # scores = max([root.score for root in trees])
-    assert len(scores) == len(candidate_moves), "Inconsistent length."
-    max_idx = scores.index(max(scores))
+    max_idx = root.get_max_neg_child_idx()
     return candidate_moves[max_idx]
 
 
@@ -223,7 +147,12 @@ class TreeNode:
     def add_child(self, c: "TreeNode"):
         self.children.append(c)
 
-    def get_max_child_idx(self):
+    def get_max_neg_child_val(self):
+        scores = [- c.score for c in self.children]
+        return max(scores)
+
+    def get_max_neg_child_idx(self):
+        # get the max negative score of children.
         scores = [- c.score for c in self.children]
         return scores.index(max(scores))
 
