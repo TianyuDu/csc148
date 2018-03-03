@@ -100,38 +100,6 @@ def get_state_score(game, state):
 
 def iterative_minimax_strategy(game: Game) -> str:
     """
-    Doc
-    """
-    state = game.current_state
-    candidate_moves = game.current_state.get_possible_moves()
-    root = TreeNode(state=state)
-    stack = [root]
-    while stack != []:
-        exam_node = stack.pop()
-        if game.is_over(exam_node.state):
-            exam_node.score = -1
-        else:
-            if exam_node.children == []:
-                possible_moves = exam_node.state.get_possible_moves()
-                stack.append(exam_node)
-                for move in possible_moves:
-                    child_node = TreeNode(
-                        state=exam_node.state.make_move(move))
-                    exam_node.add_child(child_node)
-                    stack.append(child_node)
-            else:
-                child_scores = exam_node.get_child_scores()
-                minus_scores = [-1 * s for s in child_scores]
-                exam_node.score = max(minus_scores)
-    # scores = [root.get_min_score() for root in trees]
-    # # scores = max([root.score for root in trees])
-    # assert len(scores) == len(candidate_moves), "Inconsistent length."
-    max_idx = root.get_max_child_idx()
-    return candidate_moves[max_idx]
-
-
-def iterative_minimax_strategy_2(game: Game) -> str:
-    """
     Doc String Omitted.
     """
     state = game.current_state
@@ -198,9 +166,7 @@ def iterative_minimax_strategy_2(game: Game) -> str:
                 else:  # If the exam_node.children is non-empty, means we
                     # have explored this node bef ore and all of it's children
                     # should have been scored.
-                    child_scores = exam_node.get_child_scores()
-                    minus_scores = [-1 * s for s in child_scores]
-                    exam_node.score = max(minus_scores)
+                    exam_node.score = exam_node.get_max_score()
     scores = [root.get_move_score() for root in trees]
     # scores = max([root.score for root in trees])
     assert len(scores) == len(candidate_moves), "Inconsistent length."
@@ -222,13 +188,6 @@ class TreeNode:
 
     def add_child(self, c: "TreeNode"):
         self.children.append(c)
-
-    def get_max_child_idx(self):
-        scores = [- c.score for c in self.children]
-        return scores.index(max(scores))
-
-    def get_child_scores(self):
-        return [c.score for c in self.children]
 
     def get_min_score(self):
         assert self.children != []
