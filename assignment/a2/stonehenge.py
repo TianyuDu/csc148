@@ -52,6 +52,28 @@ class StonehengeGame(Game):
         overrids the original string method in Game.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
+        >>> new_game = StonehengeGame(True, side_length=2)
+        >>> print(new_game)
+        This is a StonehengeGame with current state
+                @   @
+               /   /
+          @ - A - B   @
+             / \ / \ /
+        @ - C - D - E
+             \ / \ / \
+          @ - F - G   @
+               \   \
+                @   @
+        >>> new_game = StonehengeGame(True, side_length=1)
+        >>> print(new_game)
+        This is a StonehengeGame with current state
+              @   @
+             /   /
+        @ - A - B
+             \ / \
+          @ - C   @
+               \
+                @
         """
         return ("This is a StonehengeGame with current state "
                 + self.current_state.__str__())
@@ -292,7 +314,7 @@ class StonehengeState(GameState):
 
     def rough_outcome(self) -> float:
         """
-        Return an estimate in interval [LOSE, WIN] of best outcome the current
+        Return an estimate in interval[LOSE, WIN] of best outcome the current
         player can guarantee from state self.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
