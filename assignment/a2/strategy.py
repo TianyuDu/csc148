@@ -85,6 +85,11 @@ def get_state_score(game, state):
     input method so no example is proveded.
     """
     if game.is_over(state):  # Base case, leaf case.
+        # current_player = state.get_current_player_name()
+        # if current_player == "p1":
+        #     other_player = "p2"
+        # else:
+        #     other_player = "p1 "
         if game.is_winner(state.get_current_player_name()):
             return 1  # Current player wins, the STATE SCORE for
         # current player is 1.

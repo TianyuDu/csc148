@@ -402,7 +402,7 @@ class StonehengeState(GameState):
 
 
 if __name__ == "__main__":
-    from python_ta import check_all
-    check_all(config="a2_pyta.txt")
+    # from python_ta import check_all
+    # check_all(config="a2_pyta.txt")
     import doctest
     doctest.testmod(verbose=True)
