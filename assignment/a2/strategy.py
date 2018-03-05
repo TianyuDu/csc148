@@ -1,4 +1,5 @@
 """
+Revision: Final
 A module for strategies.
 
 NOTE: Make sure this file adheres to python-ta.
@@ -177,4 +178,4 @@ if __name__ == "__main__":
     from python_ta import check_all
     check_all(config="a2_pyta.txt")
     import doctest
-    doctest.testmod(verbose=True)
+    doctest.testmod(verbose=False)

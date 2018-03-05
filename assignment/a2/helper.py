@@ -93,9 +93,9 @@ def illustrate_graph(graph: List[List[str]], lls: List[List[str]]) -> str:
 
 
 def get_ley_line_id(lls: List[List[str]],
-                    ley_line_direction: int) -> List[List[str]]:
+                    ley_line_direction: int)-> list:
     """
-    Return the keys
+    Return the keys of item on this ley line.
     """
     assert ley_line_direction in [0, 1, 2]
     size = len(lls[1])  # Total number ley line in follow this direction.
@@ -108,29 +108,60 @@ def get_ley_line_id(lls: List[List[str]],
         # Left-top to right-bottom case.
         result_list = []
         for i in range(1, size+1):
-            node_list = []
-            for row in sample_graph[:-1]:  # Exclude the last row
-                try:
-                    node_list.append(row[-i])
-                except IndexError:
-                    pass
+            node_list = operations(sample_graph, i)
+            # for row in sample_graph[:-1]:  # Exclude the last row
+            #     try:
+            #         node_list.append(row[-i])
+            #     except IndexError:
+            #         pass
             result_list.append(node_list)
         result_list.reverse()
         last_row = sample_graph[-1]
         for i in range(len(result_list) - 1):
             result_list[i].append(last_row[i])
         return result_list
-    elif ley_line_direction == 2:
-        result_list = []
-        for i in range(size):
-            node_list = []
-            for row in sample_graph[:-1]:
-                try:
-                    node_list.append(row[i])
-                except IndexError:
-                    pass
-            result_list.append(node_list)
-        last_row = sample_graph[-1]
-        for i in range(len(last_row)):
-            result_list[i + 1].append(last_row[i])
-        return result_list
+    # elif ley_line_direction == 2:
+    result_list = []
+    for i in range(size):
+        node_list = opeartions2(sample_graph, i)
+        # for row in sample_graph[:-1]:
+        #     try:
+        #         node_list.append(row[i])
+        #     except IndexError:
+        #         pass
+        result_list.append(node_list)
+    last_row = sample_graph[-1]
+    for i in range(len(last_row)):
+        result_list[i + 1].append(last_row[i])
+    return result_list
+
+
+def operations(sample_graph: List[List[str]], i: int) -> List[str]:
+    """
+    HELPER function.
+    """
+    node_list = []
+    for row in sample_graph[:-1]:  # Exclude the last row
+        try:
+            node_list.append(row[-i])
+        except IndexError:
+            pass
+    return node_list
+
+
+def opeartions2(sample_graph: List[List[str]], i: int) -> List[str]:
+    """
+    Another HELPER function
+    """
+    node_list = []
+    for row in sample_graph[:-1]:
+        try:
+            node_list.append(row[i])
+        except IndexError:
+            pass
+    return node_list
+
+if __name__ == "__main__":
+    from python_ta import check_all
+    check_all(config="a2_pyta.txt")
+    

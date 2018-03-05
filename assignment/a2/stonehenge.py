@@ -1,4 +1,5 @@
 """
+Revision: Final
 File containing StonehengeState and StonehengeGame
 """
 from typing import List
@@ -74,7 +75,7 @@ class StonehengeGame(Game):
         get_instructions method in Game.
         
         >>> new_game = StonehengeGame(True, side_length=3)
-        >>> new_game.get_instruction() == new_game.instruction_string
+        >>> new_game.get_instructions() == new_game.instruction_string
         True
         """
         return self.instruction_string
@@ -88,8 +89,8 @@ class StonehengeGame(Game):
         >>> new_game.count_node(new_game.current_state, "p1")
         0
         >>> new_game = StonehengeGame(True, side_length=3)
-        >>> z = new_game.current_state.graph.make_move("A")
-        >>> new_game.count_node(new_game.current_state, "p1")
+        >>> new_game.current_state = new_game.current_state.make_move("A")
+        >>> new_game.count_node(new_game.current_state, "1")
         1
         """
         size = len(state.lls[0])  # number of ley line mark in each direction.
@@ -246,12 +247,12 @@ class StonehengeState(GameState):
     def make_move(self, move: str) -> "StonehengeState":
         """
         Return the GameState that results from applying move to this GameState.
-        >>> s = StonehengeState(True, 1)
+        >>> s = StonehengeState(True, 2)
         >>> s.get_possible_moves()
-        ['A', 'B', 'C']
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G']
         >>> new_state = s.make_move("A")
         >>> new_state.get_possible_moves()
-        ['B', 'C']
+        ['B', 'C', 'D', 'E', 'F', 'G']
         """
         new_state = StonehengeState(
             not (self.get_current_player_name() == "p1"),
@@ -336,6 +337,14 @@ class StonehengeState(GameState):
         number of ley lines.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
+        
+        >>> state = StonehengeState(True, 1)
+        >>> state.is_winner("p1")
+        False
+        >>> state = StonehengeState(True, 1)
+        >>> new_state = state.make_move("A")
+        >>> new_state.is_winner("p1")
+        True
         """
         total_lls = len(self.lls[0]) * 3
         check_point = player[-1]  # this would produce "1" for player "p1"
@@ -343,12 +352,20 @@ class StonehengeState(GameState):
         return (self.count_ley_line(check_point)
                 >= (total_lls / 2))
 
-    def count_ley_line(self, check: str):
+    def count_ley_line(self, check: str) -> int:
         """
         This method would count the total number of ley line that player passed
         in as input owns.
-        Since initializing the stonehenge game object requires input function
-        so no example will be provided.
+        
+        >>> state = StonehengeState(True, 2)
+        >>> state.count_ley_line("1")
+        0
+        >>> state = StonehengeState(True, 2)
+        >>> new_state = state.make_move("A")
+        >>> new_state.count_ley_line("1")
+        2
+        >>> new_state.count_ley_line("2")
+        0
         """
         size = len(self.lls[0])  # number of ley line mark in each direction.
         return sum([
@@ -363,6 +380,10 @@ class StonehengeState(GameState):
         player can guarantee from state self.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
+        
+        >>> state = StonehengeState(True, 1)
+        >>> state.rough_outcome()
+        1.0
         """
         possible_moves = self.get_possible_moves()
         current_player = self.get_current_player_name()
@@ -403,7 +424,7 @@ class StonehengeState(GameState):
 
 
 if __name__ == "__main__":
-    # from python_ta import check_all
-    # check_all(config="a2_pyta.txt")
+    from python_ta import check_all
+    check_all(config="a2_pyta.txt")
     import doctest
     doctest.testmod(verbose=False)
