@@ -94,13 +94,24 @@ class StonehengeGame(Game):
         """
         Return the instructions for this game. This overrids the original
         get_instructions method in Game.
+        
+        >>> new_game = StonehengeGame(True, side_length=3)
+        >>> new_game.get_instruction() == new_game.instruction_string
+        True
         """
         return self.instruction_string
 
     def count_node(self, state: "StonehengeState", check: str) -> int:
         """
-        A helper function that help check the number of ley line occupied by
+        A HELPER function that help check the number of ley line occupied by
         give check string.
+        
+        >>> new_game = StonehengeGame(True, side_length=3)
+        >>> new_game.count_node(new_game.current_state, "p1")
+        0
+        >>> new_game.current_state.graph[0][0] = "2"
+        >>> new_game.count_node(new_game.current_state, "p2")
+        1
         """
         size = len(state.lls[0])  # number of ley line mark in each direction.
         return sum([

@@ -28,6 +28,17 @@ def find(node: BTNode, data: object) -> BTNode:
     else:
         return find(node.right, data)
     
+    
+def evaluate(b: BTNode) -> float:
+    
+    if b.left is None and b.right is None:
+        return b.data
+    else:
+        return eval(
+            str(evaluate(b.left))
+            + b.data
+            + str(evaluate(b.right))
+    
         
 if __name__ == "__main__":
     import doctest
