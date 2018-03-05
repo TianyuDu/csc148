@@ -9,6 +9,7 @@ class Game:
     """
     Abstract class for a game to be played with two players.
     """
+    current_state: GameState
 
     def __init__(self, p1_starts: bool) -> None:
         """
