@@ -87,8 +87,9 @@ class StonehengeGame(Game):
         >>> new_game = StonehengeGame(True, side_length=3)
         >>> new_game.count_node(new_game.current_state, "p1")
         0
-        >>> new_game.current_state.graph[0][0] = "2"
-        >>> new_game.count_node(new_game.current_state, "p2")
+        >>> new_game = StonehengeGame(True, side_length=3)
+        >>> z = new_game.current_state.graph.make_move("A")
+        >>> new_game.count_node(new_game.current_state, "p1")
         1
         """
         size = len(state.lls[0])  # number of ley line mark in each direction.
@@ -109,7 +110,7 @@ class StonehengeGame(Game):
         >>> new_game = StonehengeGame(True, side_length=3)
         >>> new_game.current_state.graph[0][0] = "1"
         >>> new_game.is_over(new_game.current_state)
-        Falses
+        False
         """
         total_lls = len(state.lls[0]) * 3  # Total number of ley line.
         p1_count = self.count_node(state, "1")
@@ -146,10 +147,10 @@ class StonehengeGame(Game):
 
         >>> new_game = StonehengeGame(True, side_length=3)
         >>> new_game.str_to_move("a")
-        A
+        'A'
 		>>> new_game = StonehengeGame(True, side_length=3)
 		>>> new_game.str_to_move("B")
-		B
+		'B'
         """
         return string.upper()
 
@@ -197,11 +198,11 @@ class StonehengeState(GameState):
         """
         Return all possible moves that can be applied to this state.
 
-        >>> s = StonehengeState(True, 2)
+        >>> s = StonehengeState(True, 1)
         >>> s.get_possible_moves()
         ['A', 'B', 'C']
 
-        >>> s = StonehengeState(True, 3)
+        >>> s = StonehengeState(True, 2)
 		>>> s.get_possible_moves()
 		['A', 'B', 'C', 'D', 'E', 'F', 'G']
         """
@@ -245,11 +246,11 @@ class StonehengeState(GameState):
     def make_move(self, move: str) -> "StonehengeState":
         """
         Return the GameState that results from applying move to this GameState.
-        >>> s = StonehengeState(True, 2)
+        >>> s = StonehengeState(True, 1)
         >>> s.get_possible_moves()
         ['A', 'B', 'C']
-        >>> s.make_move("A")
-        >>> s.get_possible_moves()
+        >>> new_state = s.make_move("A")
+        >>> new_state.get_possible_moves()
         ['B', 'C']
         """
         new_state = StonehengeState(
@@ -305,7 +306,7 @@ class StonehengeState(GameState):
         returns True is and only if a this passed in move is included in the
         possible move based on current state.
 
-        >>> a = StonehengeState(True, 2)
+        >>> a = StonehengeState(True, 1)
         >>> a.get_possible_moves()
         ['A', 'B', 'C']
         >>> a.is_valid_move("C")
@@ -405,4 +406,4 @@ if __name__ == "__main__":
     # from python_ta import check_all
     # check_all(config="a2_pyta.txt")
     import doctest
-    doctest.testmod(verbose=True)
+    doctest.testmod(verbose=False)
