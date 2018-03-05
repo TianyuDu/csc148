@@ -105,7 +105,7 @@ class MinimaxUnitTests(unittest.TestCase):
                         ("Calling iterative minimax on a game of Stonehenge" +
                          " with " +
                          "the following board should return a move in {} " +
-                          "but got {} instead.\n{}").format(
+                         "but got {} instead.\n{}").format(
                              expected_moves, move_chosen,
                              STONEHENGE_MINIMAX_BOARD
                          ))

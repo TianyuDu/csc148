@@ -59,7 +59,9 @@ def rough_outcome_strategy(game: Game) -> Any:
 
 def recursive_minimax_strategy(game: Game) -> Any:
     """
-    Recursive version of Minimax strategy.
+    Recursive version of Minimax strategy. This is a wrapper of the recursion
+    core of this strategy. Since initializing method of game requires input
+    function so no example will be provided to this function.
     """
     candidate = game.current_state.get_possible_moves()
     canditate_prop = [
@@ -78,7 +80,9 @@ def recursive_minimax_strategy(game: Game) -> Any:
 
 def get_state_score(game, state):
     """
-    Helper function
+    This is the helper function for the recursive version of min max strategy,
+    this is the recursion part of that strategy. To initialize game, we need
+    input method so no example is proveded.
     """
     if game.is_over(state):  # Base case, leaf case.
         if game.is_winner(state.get_current_player_name()):
@@ -88,9 +92,7 @@ def get_state_score(game, state):
         # current player is -1
     else:
         return max([
-            -1 * get_state_score(game, state.make_move(
-                move
-            ))
+            -1 * get_state_score(game, state.make_move(move))
             # -1 * ... reflects the the MOVE SCORE for certain move
             # for current player
             for move in state.get_possible_moves()
@@ -98,134 +100,72 @@ def get_state_score(game, state):
         #  for current player.
 
 
-def iterative_minimax_strategy(game: Game) -> str:
+def iterative_minimax_strategy(game: Game) -> Any:
     """
-    Doc String Omitted.
+    The iterative version of mini max strategy.
+    It will create a tree stracture to record score of every possible branching
+    of game state from current state and return the best possible state.
     """
     state = game.current_state
     candidate_moves = game.current_state.get_possible_moves()
-    our_player = game.current_state.get_current_player_name()
-    if our_player == "p1":
-        oppo_player = "p2"
-    else:
-        oppo_player = "p1"
-    trees = [
-        TreeNode(state.make_move(move))
-        for move in candidate_moves
-    ]  # Create tree nodes for candidate moves.
-    #  So that we have tree roots for each canddiate move.
-    for root in trees:  # We focus on the tree of each candidate move tryin to
-        # calculate their score
-        # stack = [
-        #     TreeNode(root.state.make_move(move))
-        #     for move in root.state.get_possible_moves()
-        # ]
-        #
-        # if game.is_over(root.state):
-        #     game.current_state = root.state
-        #     if game.is_winner(current_player):
-        #         root.score = 1
-        #     else:
-        #         root.score = -1
-        #     continue
-        # for sub in stack:
-        #     root.add_child(sub)
-        stack = [root]  # Create current stack.
-        while stack != []:
-            exam_node = stack.pop()  # Take out the last node.
-            # If current node representing a game-over state.
-            if game.is_over(exam_node.state):
-                game.current_state = exam_node.state  # Assign state to game,
-                # So that game could exam..
-                if game.is_winner(our_player):
-                    exam_node.score = 1  # OUR player is the winner.
-                elif game.is_winner(oppo_player):
-                    exam_node.score = -1  # if the OPPONENT player is the winner
-            # Else, if the current representing a state that NOT over yet.
-            else:
-                if exam_node.children == []:
-                    # If the current node has NOT been explored yet.
-                    # Create a tree structure branching
-                    # out all accessible states.
-                    possible_moves = exam_node.state.get_possible_moves()
-                    stack.append(exam_node)
-                    for move in possible_moves:
-                        child_node = TreeNode(
-                            state=exam_node.state.make_move(move))
-                        exam_node.add_child(child_node)
-                        stack.append(child_node)
-                        # Create TreeNode containing all accessible moves, and
-                        # add them to the children of current TreeNode.
-
-                    # stack.append(exam_node)
-                    # # Add current PARENT back to stack.
-                    # for child in exam_node.children:
-                    #     stack.append(child)
-
-                        # Add each children to the stack AFTER the parent node
-                else:  # If the exam_node.children is non-empty, means we
-                    # have explored this node bef ore and all of it's children
-                    # should have been scored.
-                    exam_node.score = exam_node.calculate_score()
-    scores = [root.calculate_score() for root in trees]
-    # scores = max([root.score for root in trees])
-    assert len(scores) == len(candidate_moves), "Inconsistent length."
+    root = TreeNode(state=state)
+    stack = [root]
+    while stack != []:
+        exam_node = stack.pop()
+        if game.is_over(exam_node.state):
+            exam_node.score = -1
+        elif exam_node.children == []:
+            possible_moves = exam_node.state.get_possible_moves()
+            stack.append(exam_node)
+            for move in possible_moves:
+                child_node = TreeNode(
+                    state=exam_node.state.make_move(move))
+                exam_node.add_child(child_node)
+                stack.append(child_node)
+        else:
+            scores = [- c.score for c in exam_node.children]
+            exam_node.score = max(scores)
+    # Root object now has all information it needs.
+    scores = [- c.score for c in root.children]
     max_idx = scores.index(max(scores))
     return candidate_moves[max_idx]
 
 
 class TreeNode:
     """
-    ..
+    TreeNode class used to implement the iterative version of minimax strategy.
+    state: A GameState object that
     """
     state: GameState
     children: List["TreeNode"]
 
     def __init__(self, state=None):
+        """
+        Initializing methods for TreeNode object.
+        >>> t = TreeNode()
+        >>> t.score = 3
+        >>> t.score
+        3
+        """
         self.state = state
         self.children = list()
         self.score = None
 
     def add_child(self, c: "TreeNode"):
+        """
+        Helper function, adding a new TreeNode to this TreeNode's children list.
+        a  = TreeNode
+        >>> t = TreeNode()
+        >>> t2 = TreeNode()
+        >>> t.add_child(t2)
+        >>> t2 in t.children
+        True
+        """
         self.children.append(c)
-
-    def get_min_score(self):
-        assert self.children != []
-        return min([
-            child.score
-            for child in self.children
-        ])
-
-    def get_high_score(self):
-        assert self.children != [], "This TreeNode is leaf and has no child."
-        return max([
-            child.score
-            for child in self.children
-        ])  # We don't have to concern the case
-        # That the list comperhansion returns an empty list.
-
-    def calculate_score(self):
-        if self.children == []:
-            assert self.score is not None
-            return self.score
-        if all([
-                child_node.score == 1
-                for child_node in self.children
-        ]):
-            return 2  # Order 1: if all possible give
-        if all([
-                child_node.score == -1
-                for child_node in self.children
-        ]):
-            return -1
-        if any([
-                child_node.score == 1
-                for child_node in self.children
-        ]):
-            return 1
-        return 0
 
 
 if __name__ == "__main__":
     from python_ta import check_all
     check_all(config="a2_pyta.txt")
+    import doctest
+    doctest.testmod(verbose=True)

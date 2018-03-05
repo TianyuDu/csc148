@@ -14,21 +14,86 @@ class StonehengeGame(Game):
     current_state: "StonehengeState"
     instruction_string: str
 
-    def __init__(self, p1_starts: bool) -> None:
+    def __init__(self, p1_starts: bool, side_length=None) -> None:
         """
         Initialize this Game, using p1_starts to find who the first player is.
+        Overridding the original initializing method in Game.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
         """
-        side_length = int(input("Side length of board (1~5)"))
+        if side_length is None:
+            side_length = int(input("Side length of board (1~5)"))
         self.current_state = StonehengeState(p1_starts, side_length)
-        self.instruction_string = "missing instruction"
+        self.instruction_string = """
+        [What Stonehenge is about]
+        Stonehenge is played on a hexagonal grid formed by removing the corners 
+        from a triangular grid. 
+        Boards can have various sizes based on their side-length 
+        (the number of cells in the grid along the bottom), 
+        but are always formed in a similar manner: 
+        For side-length n, the first row has 2 cells, 
+        and each row after has 1 additional cell up until
+        there's a row with n + 1 cells, 
+        after which the last row has only n cells in it.
+        
+        [How to win]
+        Players take turns claiming cells (in the diagram: circles labelled 
+        with a capital letter). When a player captures at least half of 
+        the cells in a ley-line 
+        then the player captures that ley-line. The rst player 
+        to capture at least half of the ley-lines is the winner.
+        A ley-line, once claimed, cannot be taken by the other player.        
+        """
 
     def __str__(self) -> str:
+        """
+        Ths string method that return a string containing information about
+        this game object, including it's type and it's current state. This
+        overrids the original string method in Game.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
+        >>> new_game = StonehengeGame(True, side_length=2)
+        >>> print(new_game)
+        This is a StonehengeGame with current state
+                @   @
+               /   /
+          @ - A - B   @
+             / \ / \ /
+        @ - C - D - E
+             \ / \ / \
+          @ - F - G   @
+               \   \
+                @   @
+        >>> new_game = StonehengeGame(True, side_length=1)
+        >>> print(new_game)
+        This is a StonehengeGame with current state
+              @   @
+             /   /
+        @ - A - B
+             \ / \
+          @ - C   @
+               \
+                @
+        """
+        return ("This is a StonehengeGame with current state "
+                + self.current_state.__str__())
+
+    def __repr__(self) -> str:
+        """
+        The repr method returns a string containing information about
+        this game object, including it's type and it's current state. This
+        overrids the original string method in Game. This method overrids
+        the original repr method in Game.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
+        """
         return ("This is a StonehengeGame with current state "
                 + self.current_state.__str__())
 
     def get_instructions(self) -> str:
         """
-        Return the instructions for this game
+        Return the instructions for this game. This overrids the original
+        get_instructions method in Game.
         """
         return self.instruction_string
 
@@ -171,22 +236,38 @@ class StonehengeState(GameState):
             # Current_lls_row state collection.
             for lls_number in range(len(ley_line_id)):
                 current_line_ids = ley_line_id[lls_number]
-                if new_state.lls[i][lls_number] == "@":
-                    # ley line state for current focused line.
-                    current_player_count = sum([
-                        int(new_state.graph
-                            [new_state.keys[value][0]]
-                            [new_state.keys[value][1]]
-                            == current_player_flag)
-                        for value in current_line_ids
-                    ])
-                    if current_player_count >= len(current_line_ids) / 2:
-                        new_state.lls[i][lls_number] = current_player_flag
+                self.operations((i, lls_number, new_state,
+                                 current_player_flag, current_line_ids))
         return new_state
+
+    def operations(self, input_package):
+        """
+        The helper function for make move method to aviod too many nest and
+        complicated codes, to improve the readability.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
+        """
+        (i, lls_number, new_state,
+         current_player_flag, current_line_ids) = input_package
+        if new_state.lls[i][lls_number] == "@":
+            # ley line state for current focused line.
+            current_player_count = sum([
+                int(new_state.graph
+                    [new_state.keys[value][0]]
+                    [new_state.keys[value][1]]
+                    == current_player_flag)
+                for value in current_line_ids
+            ])
+            if current_player_count >= len(current_line_ids) / 2:
+                new_state.lls[i][lls_number] = current_player_flag
 
     def is_valid_move(self, move: str) -> bool:
         """
-        Return whether move is a valid move for this GameState.
+        Return whether move is a valid move for this GameState. This method
+        returns True is and only if a this passed in move is included in the
+        possible move based on current state.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
         """
         return move in self.get_possible_moves()
 
@@ -194,6 +275,8 @@ class StonehengeState(GameState):
         """
         Return a representation of this state (which can be used for
         equality testing).
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
         """
         return (
             "current player: {}\n".format(self.get_current_player_name()) +
@@ -202,13 +285,26 @@ class StonehengeState(GameState):
         )
 
     def is_winner(self, player: str) -> bool:
+        """
+        This method examine if a player is winner, this method returns true
+        if and only if this player passed in owned at least half of the total
+        number of ley lines.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
+        """
         total_lls = len(self.lls[0]) * 3
         check_point = player[-1]  # this would produce "1" for player "p1"
         # and "2"  for player "p2".
-        return (self.count_node(check_point)
+        return (self.count_ley_line(check_point)
                 >= (total_lls / 2))
 
-    def count_node(self, check: str):
+    def count_ley_line(self, check: str):
+        """
+        This method would count the total number of ley line that player passed
+        in as input owns.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
+        """
         size = len(self.lls[0])  # number of ley line mark in each direction.
         return sum([
             int(self.lls[i][j] == check)
@@ -218,8 +314,10 @@ class StonehengeState(GameState):
 
     def rough_outcome(self) -> float:
         """
-        Return an estimate in interval [LOSE, WIN] of best outcome the current
+        Return an estimate in interval[LOSE, WIN] of best outcome the current
         player can guarantee from state self.
+        Since initializing the stonehenge game object requires input function
+        so no example will be provided.
         """
         possible_moves = self.get_possible_moves()
         current_player = self.get_current_player_name()
@@ -262,3 +360,5 @@ class StonehengeState(GameState):
 if __name__ == "__main__":
     from python_ta import check_all
     check_all(config="a2_pyta.txt")
+    import doctest
+    doctest.testmod(verbose=True)
