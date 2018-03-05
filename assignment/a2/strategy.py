@@ -113,7 +113,11 @@ def iterative_minimax_strategy(game: Game) -> Any:
     while stack != []:
         exam_node = stack.pop()
         if game.is_over(exam_node.state):
-            exam_node.score = -1
+            # exam_node.score = -1
+            if game.is_winner(exam_node.state.get_current_player_name()):
+                exam_node.score = 1
+            else:
+                exam_node.score = -1
         elif exam_node.children == []:
             possible_moves = exam_node.state.get_possible_moves()
             stack.append(exam_node)

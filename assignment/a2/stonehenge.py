@@ -52,28 +52,6 @@ class StonehengeGame(Game):
         overrids the original string method in Game.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
-        >>> new_game = StonehengeGame(True, side_length=2)
-        >>> print(new_game)
-        This is a StonehengeGame with current state
-                @   @
-               /   /
-          @ - A - B   @
-             / \ / \ /
-        @ - C - D - E
-             \ / \ / \
-          @ - F - G   @
-               \   \
-                @   @
-        >>> new_game = StonehengeGame(True, side_length=1)
-        >>> print(new_game)
-        This is a StonehengeGame with current state
-              @   @
-             /   /
-        @ - A - B
-             \ / \
-          @ - C   @
-               \
-                @
         """
         return ("This is a StonehengeGame with current state "
                 + self.current_state.__str__())
@@ -101,6 +79,8 @@ class StonehengeGame(Game):
         """
         A helper function that help check the number of ley line occupied by
         give check string.
+
+        >>> new_game =
         """
         size = len(state.lls[0])  # number of ley line mark in each direction.
         return sum([
