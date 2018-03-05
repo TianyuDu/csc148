@@ -73,7 +73,7 @@ class StonehengeGame(Game):
         """
         Return the instructions for this game. This overrids the original
         get_instructions method in Game.
-        
+
         >>> new_game = StonehengeGame(True, side_length=3)
         >>> new_game.get_instructions() == new_game.instruction_string
         True
@@ -84,7 +84,7 @@ class StonehengeGame(Game):
         """
         A HELPER function that help check the number of ley line occupied by
         give check string.
-        
+
         >>> new_game = StonehengeGame(True, side_length=3)
         >>> new_game.count_node(new_game.current_state, "p1")
         0
@@ -337,7 +337,7 @@ class StonehengeState(GameState):
         number of ley lines.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
-        
+
         >>> state = StonehengeState(True, 1)
         >>> state.is_winner("p1")
         False
@@ -356,7 +356,7 @@ class StonehengeState(GameState):
         """
         This method would count the total number of ley line that player passed
         in as input owns.
-        
+
         >>> state = StonehengeState(True, 2)
         >>> state.count_ley_line("1")
         0
@@ -380,7 +380,7 @@ class StonehengeState(GameState):
         player can guarantee from state self.
         Since initializing the stonehenge game object requires input function
         so no example will be provided.
-        
+
         >>> state = StonehengeState(True, 1)
         >>> state.rough_outcome()
         1.0

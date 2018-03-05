@@ -85,16 +85,24 @@ def get_state_score(game, state):
     this is the recursion part of that strategy. To initialize game, we need
     input method so no example is proveded.
     """
-    if game.is_over(state):  # Base case, leaf case.
+    # if game.is_over(state):  # Base case, leaf case.
+    if state.get_possible_moves() == []:
         # current_player = state.get_current_player_name()
         # if current_player == "p1":
         #     other_player = "p2"
         # else:
         #     other_player = "p1 "
-        if game.is_winner(state.get_current_player_name()):
+        game.current_state = state
+        current_player = state.get_current_player_name()
+        if current_player == "p1":
+            other_player = "p2"
+        else:
+            other_player = "p1"
+        if game.is_winner(current_player):
             return 1  # Current player wins, the STATE SCORE for
-        # current player is 1.
-        return -1  # Oppo player wins, the STATE SCORE for
+        elif game.is_winner(other_player):
+            return -1
+        return 0
         # current player is -1
     else:
         return max([
@@ -120,10 +128,22 @@ def iterative_minimax_strategy(game: Game) -> Any:
         exam_node = stack.pop()
         if game.is_over(exam_node.state):
             # exam_node.score = -1
-            if game.is_winner(exam_node.state.get_current_player_name()):
-                exam_node.score = 1
+            game.current_state = exam_node.state
+            current_player = exam_node.state.get_current_player_name()
+            if current_player == "p1":
+                other_player = "p2"
             else:
+                other_player = "p1"
+            if game.is_winner(current_player):  # If win.
+                exam_node.score = 1
+            elif game.is_winner(other_player):  # If loss (opponent wins)
                 exam_node.score = -1
+            else:  # Else, considered as tie.
+                exam_node.score = 0
+            # elif game.is_winner(other_player):
+            #     exam_node.score = -1
+            # else:
+            #     exam_node.score = 0
         elif exam_node.children == []:
             possible_moves = exam_node.state.get_possible_moves()
             stack.append(exam_node)
