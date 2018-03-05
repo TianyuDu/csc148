@@ -241,14 +241,14 @@ def list_if(t: Tree, p: Callable[[Any], bool]) -> list:
     >>> set(list_) == {0, 2, 4, 6, 8}
     True
     """
-    self_ = [t.value] if p(t.value) else []
+    self_eval = [t.value] if p(t.value) else []
     if t.children == []:
-        return self_
+        return self_eval
     else:
-        return gather_lists([
-            self_ + list_if(c, p)
+        return sum([
+            self_eval + list_if(c, p)
             for c in t.children
-            ]) 
+            ], []) 
 
 
 # helper function that may be useful in the functions
@@ -300,4 +300,4 @@ if __name__ == '__main__':
     # import python_ta
     # python_ta.check_all()
     import doctest
-    doctest.testmod()
+    doctest.testmod(verbose=True)
