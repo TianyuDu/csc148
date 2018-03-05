@@ -1,5 +1,5 @@
 """
-Revision: Final
+Revision: Final 2
 A module for strategies.
 
 NOTE: Make sure this file adheres to python-ta.
