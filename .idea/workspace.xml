@@ -4,10 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assignment/a2/stonehenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/stonehenge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment/a2/strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/strategy.py" afterDir="false" />
-    </list>
+    <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="" />
     <ignored path="csc148.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,22 +54,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="stonehenge.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
+      <file leaf-file-name="stonehenge_unittest_basic.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="67" column="51" lean-forward="true" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+            <state relative-caret-position="450">
+              <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stonehenge_unittest_basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-            </state>
-          </provider>
+      <file leaf-file-name="other_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment/a2/other_test.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="strategy.py" pinned="false" current-in-tab="false">
@@ -713,11 +706,11 @@
     <layout>
       <window_info anchor="right" id="TODO" order="5" sideWeight="0.50448143" side_tool="true" weight="0.20607029" />
       <window_info anchor="right" id="Event Log" order="9" show_stripe_button="false" side_tool="true" />
-      <window_info active="true" anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" visible="true" weight="0.43025362" />
+      <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" weight="0.43025362" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3288719" />
       <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.2829828" />
       <window_info anchor="right" id="Terminal" order="7" show_stripe_button="false" side_tool="true" weight="0.32977304" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.17784877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.17784877" />
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" order="10" sideWeight="0.38709676" weight="0.32850778" />
@@ -877,13 +870,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a1/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1153,13 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
@@ -1171,10 +1150,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/other_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="67" column="51" lean-forward="true" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+        <state relative-caret-position="403">
+          <caret line="88" column="7" lean-forward="true" selection-start-line="88" selection-start-column="7" selection-end-line="88" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
         </state>
       </provider>
     </entry>
