@@ -1,11 +1,12 @@
 """
-Revision: Final 2
+Revision: Final 3
 A module for strategies.
 
 NOTE: Make sure this file adheres to python-ta.
 Adjust the type annotations as needed, and implement both a recursive
 and an iterative version of minimax.
 """
+import copy
 from typing import Any, List
 from game import Game
 from game_state import GameState
@@ -58,12 +59,13 @@ def rough_outcome_strategy(game: Game) -> Any:
     return best_move
 
 
-def recursive_minimax_strategy(game: Game) -> Any:
+def recursive_minimax_strategy(input_game: Game) -> Any:
     """
     Recursive version of Minimax strategy. This is a wrapper of the recursion
     core of this strategy. Since initializing method of game requires input
     function so no example will be provided to this function.
     """
+    game = copy.deepcopy(input_game)
     candidate = game.current_state.get_possible_moves()
     canditate_prop = [
         -1 * get_state_score(game, game.current_state.make_move(
@@ -79,13 +81,14 @@ def recursive_minimax_strategy(game: Game) -> Any:
     return candidate[max_index]
 
 
-def get_state_score(game, state):
+def get_state_score(input_game, state):
     """
     This is the helper function for the recursive version of min max strategy,
     this is the recursion part of that strategy. To initialize game, we need
     input method so no example is proveded.
     """
     # if game.is_over(state):  # Base case, leaf case.
+    game = copy.deepcopy(input_game)
     if state.get_possible_moves() == []:
         # current_player = state.get_current_player_name()
         # if current_player == "p1":
@@ -114,12 +117,13 @@ def get_state_score(game, state):
         #  for current player.
 
 
-def iterative_minimax_strategy(game: Game) -> Any:
+def iterative_minimax_strategy(input_game: Game) -> Any:
     """
     The iterative version of mini max strategy.
     It will create a tree stracture to record score of every possible branching
     of game state from current state and return the best possible state.
     """
+    game = copy.deepcopy(input_game)
     state = game.current_state
     candidate_moves = game.current_state.get_possible_moves()
     root = TreeNode(state=state)

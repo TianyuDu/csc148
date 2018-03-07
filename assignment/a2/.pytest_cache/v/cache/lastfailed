@@ -1,1 +1,4 @@
-{}
+{
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_iterative_stonehenge_one_winning_move_not_immediate": true,
+  "minimax_unittest_basic.py::MinimaxUnitTests::test_iterative_subtract_square_4": true
+}
