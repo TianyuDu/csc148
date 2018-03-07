@@ -1,0 +1,6 @@
+{
+  "minimax_penguin_tests_enhanced.py::MinimaxUnitTests::test_iterative_subtract_square": true,
+  "minimax_penguin_tests_enhanced.py::MinimaxUnitTests::test_recursive_subtract_square": true,
+  "minimax_penguin_tests_enhanced.py::MinimaxUnitTests::test_stonehenge_one_step": true,
+  "minimax_penguin_tests_enhanced.py::MinimaxUnitTests::test_stonrhenge_five_steps": true
+}
