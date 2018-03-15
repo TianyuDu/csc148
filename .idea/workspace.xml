@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="749951f0-cf83-490c-93ab-44f565cd01be" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assignment/a2/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/assignment/a2/.pytest_cache/v/cache/lastfailed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab/lab7/ex7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab/lab7/handout.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab/lab7/test_concatenate_leaves_basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab/lab7/test_count_leaves_basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab/lab7/test_sum_internal_basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lab/lab7/test_sum_leaves_basic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="csc148.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,71 +65,7 @@
     <favorites_list name="csc148" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="stonehenge_unittest_basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2646">
-              <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="minimax_unittest_basic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="auto_checker.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/auto_checker.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strategy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stonehenge.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3618">
-              <caret line="134" column="35" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helper.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/helper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/a2/game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -220,10 +162,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1920" />
-    <option name="height" value="1178" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -270,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,12 +232,20 @@
             <path>
               <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
               <item name="csc148" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="a2" type="462c0819:PsiDirectoryNode" />
+              <item name="Penguin Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="csc148" type="b2602c69:ProjectViewProjectNode" />
+              <item name="csc148" type="462c0819:PsiDirectoryNode" />
               <item name="lab" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -678,21 +626,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 13h 06m 43s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 13h 06m 45s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 13h 07m 51s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 13h 10m 33s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 13h 10m 39s.xml">
-      <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 13h 10m 45s.xml">
       <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
     </history-entry>
@@ -708,6 +641,21 @@
     <history-entry file="py_test_in_minimax_unittest_basic_py - 2018.03.06 at 21h 54m 36s.xml">
       <configuration name="py.test in minimax_unittest_basic.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_in_minimax_penguin_tests_enhanced(not_failing)_py - 2018.03.06 at 22h 03m 33s.xml">
+      <configuration name="py.test in minimax_penguin_tests_enhanced(not failing).py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_minimax_penguin_tests_enhanced_py - 2018.03.06 at 22h 03m 58s.xml">
+      <configuration name="py.test in minimax_penguin_tests_enhanced.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_minimax_penguin_tests_regular(not_failing)_py - 2018.03.06 at 22h 04m 30s.xml">
+      <configuration name="py.test in minimax_penguin_tests_regular(not failing).py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_minimax_penguin_tests_regular_py - 2018.03.06 at 22h 05m 04s.xml">
+      <configuration name="py.test in minimax_penguin_tests_regular.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_minimax_penguin_tests_enhanced_py - 2018.03.06 at 22h 05m 33s.xml">
+      <configuration name="py.test in minimax_penguin_tests_enhanced.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,23 +667,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1178" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.185836" />
       <window_info anchor="right" id="TODO" order="5" sideWeight="0.50448143" side_tool="true" weight="0.20607029" />
       <window_info anchor="right" id="Event Log" order="9" show_stripe_button="false" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3288719" />
       <window_info anchor="bottom" x="590" y="73" width="772" height="1127" id="Python Console" order="7" sideWeight="0.5014675" weight="0.2826087" />
       <window_info anchor="bottom" x="318" y="829" width="1526" height="908" id="Run" order="8" sideWeight="0.4985325" weight="0.39339623" />
-      <window_info anchor="right" id="Terminal" order="7" sideWeight="0.6137652" side_tool="true" weight="0.4030884" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954792" visible="true" weight="0.1826411" />
-      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" order="10" sideWeight="0.38523924" weight="0.25292864" />
       <window_info id="Structure" order="1" show_stripe_button="false" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Terminal" order="7" sideWeight="0.6137652" side_tool="true" weight="0.4030884" />
       <window_info x="-96" y="763" width="3100" height="478" id="Favorites" order="3" sideWeight="0.5045208" side_tool="true" weight="0.11661342" />
       <window_info anchor="right" id="Debug" order="6" sideWeight="0.37905467" weight="0.44994676" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info id="Course Description" order="2" sideWeight="0.50079745" side_tool="true" weight="0.24919094" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -888,31 +835,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assignment/a1/game_interface.py">
+    <entry file="file://$PROJECT_DIR$/assignment/a2/auto_checker.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a1/game_interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a1/subtractsquare_unittest_subset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="162">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1112,34 +1038,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/strategy_archive.py" />
-    <entry file="file://$PROJECT_DIR$/assignment/a2/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2646">
-          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/my_strategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="154" column="28" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/my_strategy.py" />
     <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3618">
@@ -1150,14 +1049,52 @@
     <entry file="file://$PROJECT_DIR$/assignment/a2/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/Penguin Test/my_results">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/Penguin Test/minimax_penguin_tests_enhanced.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/Penguin Test/minimax_penguin_tests_regular(not failing).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3385" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment/a2/auto_checker.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/minimax_unittest_basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment/a2/stonehenge_unittest_basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="98" column="14" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
         </state>
       </provider>
     </entry>
