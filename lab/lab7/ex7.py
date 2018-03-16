@@ -83,7 +83,14 @@ def list_longest_path(node: Union[BTNode, None]) -> list:
     >>> list_longest_path(b3)
     [5, 3, 2]
     """
-    pass
+    if node is None:
+        return []
+    return [node.data] + max([
+        list_longest_path(c)
+        for c in [node.left, node.right]
+        ],
+        key=lambda x: len(x)
+        )
 
 
 def list_between(node: Union[BTNode, None], start: object, end: object) -> list:
@@ -109,9 +116,27 @@ def list_between(node: Union[BTNode, None], start: object, end: object) -> list:
     >>> L
     [4, 6, 8, 10]
     """
-    pass
-
-
+    assert start <= end, "Pre-condition not satisfied."
+    # # Empty tree case
+    # if node is None:
+    #     return []
+    # _self = [node.data] if (start <= node.data <= end) else []
+    # if start > node.data: # Right tree search
+    #     return list_between(node.right, start, end) + _self
+    # elif end < node.data:
+    #     return list_between(node.left, start, end) + _self
+    # return sum(
+    #     [list_between(node.left, start, end),
+    #     list_between(node.right, start, end),
+    #     _self], []
+    #     )
+    if node is None:
+        return []
+    left = [] if start > node.data else list_between(node.left, start, end)
+    right = [] if end < node.data else list_between(node.right, start, end)
+    root = [node.data] if (start <= node.data <= end) else []
+    return left + root + right
+        
 def count_shallower(t: Union[BTNode, None], n: int) -> list:
     """ Return the number of nodes in tree rooted at t with
     depth less than n.
@@ -120,12 +145,19 @@ def count_shallower(t: Union[BTNode, None], n: int) -> list:
     >>> count_shallower(t, 2)
     3
     """
-    pass
+    if t is None or n <= 0:
+        return 0
+    # else:
+    return 1 + sum([
+        count_shallower(c, n-1)
+        for c in [t.left, t.right]
+    ])
 
 
 def concatenate_leaves(t: Union[BTNode, None]) -> str:
     """
-    Return the string values in the Tree rooted at t concatenated from left to right.
+    Return the string values in the Tree rooted at t concatenated
+    from left to right.
     Assume all leaves have string value.
 
     >>> t1 = BTNode("one")
@@ -136,7 +168,15 @@ def concatenate_leaves(t: Union[BTNode, None]) -> str:
     >>> concatenate_leaves(t3)
     'onetwo'
     """
-    pass
+    if t is None:
+        return ""
+    elif t.left is None and t.right is None:  # Leaf case.
+        return t.data
+    # else:
+    return (
+        concatenate_leaves(t.left) +
+        concatenate_leaves(t.right)
+        )
 
 
 def count_leaves(t: Union[BTNode, None]) -> int:
@@ -151,7 +191,15 @@ def count_leaves(t: Union[BTNode, None]) -> int:
     >>> count_leaves(t3)
     2
     """
-    pass
+    if t is None:
+        return 0
+    elif t.left is None and t.right is None: # Leaf case
+        return 1
+    # else:
+    return sum(
+        count_leaves(c)
+        for c in [t.left, t.right]
+        )
 
 
 def sum_leaves(t: Union[BTNode, None]) -> int:
@@ -168,7 +216,15 @@ def sum_leaves(t: Union[BTNode, None]) -> int:
     >>> sum_leaves(t3)
     3
     """
-    pass
+    if t is None:  # Empty Tree Case
+        return 0
+    elif t.left == t.right == None:  # Leaf case
+        return t.data
+    # else: # Other case
+    return sum(
+        sum_leaves(c)
+        for c in [t.left, t.right]
+        )
 
 
 def sum_internal(t: Union[BTNode, None]) -> int:
@@ -185,11 +241,18 @@ def sum_internal(t: Union[BTNode, None]) -> int:
     >>> sum_internal(t3)
     3
     """
-    pass
+    if t is None:  # Empty tree case.
+        return 0
+    elif t.left == t.right == None:  # Leaf case.
+        return 0
+    return t.data + sum(
+        sum_internal(c)
+        for c in [t.left, t.right]
+        )
 
 
 if __name__ == "__main__":
     import python_ta
-    python_ta.check_all(config='pylint.txt')
+    # python_ta.check_all(config='pylint.txt')
     import doctest
-    doctest.testmod()
+    doctest.testmod(verbose=True)

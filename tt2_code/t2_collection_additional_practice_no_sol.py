@@ -31,7 +31,15 @@ class Tree:
         >>> t.sum_pos()
         20
         """
-        pass 
+        _value = self.value if self.value > 0 else 0
+        if not self.children:
+            return _value
+        else:
+            return _value + sum([
+                c.sum_pos()
+                for c in self.children
+                ])
+            
     
     ## 跟Path有关的额外练习
     
@@ -45,7 +53,14 @@ class Tree:
         >>> t.longest_path2()
         2
         """
-        pass
+        if not self.children: # If children is empty, then stop here.
+            # The path length is marked as 0
+            return 0
+        else: # If there is children
+            return 1 + max(
+                c.longest_path2()
+                for c in self.children
+                )
         
         
     ## 跟Depth有关的额外练习
@@ -63,7 +78,13 @@ class Tree:
         >>> t.count_at_depth(2)
         4
         """
-        pass       
+        if depth == 0:
+            return 1
+        else:
+            return sum([
+                c.count_at_depth(depth - 1)
+                for c in self.children
+                ])
     
     def sum_values_until_depth(self, depth):
         """ Returns the sum of all the values in this tree until given depth is reached
@@ -83,7 +104,13 @@ class Tree:
         >>> t.sum_values_until_depth(4)
         48
         """
-        pass
+        if depth < 0:
+            return 0
+        else:
+            return self.value + sum([
+                c.sum_values_until_depth(depth - 1)
+                for c in self.children
+                ])
    
     
 if __name__ == '__main__':
