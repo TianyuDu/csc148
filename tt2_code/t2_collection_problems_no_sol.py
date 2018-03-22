@@ -13,7 +13,13 @@ def num_lists(obj: Union[Any, List]) -> int:
     >>> num_lists([1, [2], [[3, 4]]])
     4
     """
-    pass
+    if not isinstance(obj, list):
+        return 0
+    else:
+        return  1 + sum([
+            num_lists(c)
+            for c in obj
+            ])
 
 # Recursion Q2
 
@@ -30,7 +36,13 @@ def num_strings(obj: Union[Any, List]) -> int:
     >>> num_strings([1, ["you"], "really", [["suck", 4]]])
     3
     """
-    pass
+    if not isinstance(obj, list):  # For end case.
+        return int(isinstance(obj, str))
+    else:  # List case.
+        return int(isinstance(obj, str)) + sum([
+            num_strings(x)
+            for x in obj
+            ])
     
 # Recursion Q3
 
@@ -48,7 +60,16 @@ def all_string_length(obj: Union[Any, List]) -> int:
     >>> all_string_length([1, ["you"], "really", [["suck", 4]]])
     13
     """
-    pass
+    if not isinstance(obj, list):
+        if isinstance(obj, str):
+            return len(obj)
+        else:
+            return 0
+    else:
+        return sum([
+            all_string_length(x)
+            for x in obj
+            ])
 
 
 # Binary Tree
@@ -149,10 +170,13 @@ def height(node: Union[BTNode, None]) -> int:
     >>> height(BTNode(5, BTNode(3), BTNode(7)))
     2
     """
-    if node is None:
+    if node is None:  # Empty tree.
         return 0
     else:
-        return 1 + max(height(node.left), height(node.right))
+        return 1 + max(
+            height(node.left),
+            height(node.right)
+            )
 
 # module level function to calcuate the maximum node from the 
 # given node (BT), please note this is NOT binary search
@@ -161,7 +185,7 @@ def find(node: Union[BTNode, None],
     """
 
     Return a BTNode containing data, or else None.
-
+    
     >>> find(None, 15) is None
     True
     >>> b = BTNode(5, BTNode(4))
@@ -170,16 +194,23 @@ def find(node: Union[BTNode, None],
     >>> find(b, 4)
     BTNode(4, None, None)
     """
-    if node is None:
+    if node is None:  # Empty tree.
         return None
     else:
         find_left_result = find(node.left, data)
-        if node.data == data:
+        find_right_result = find(node.right, data)
+        # @ Pre-order
+        if node.data == data:  # If found on root.
             return node
-        elif find_left_result is not None:
+        elif find_left_result is not None:  # If found on the left.
             return find_left_result
+        elif find_right_result is not None:
+            return find_right_result
         else:
-            return find(node.right, data)
+            return None
+        
+        # else: THE EFFICIENT WRITING METHOD.
+        #     return find(node.right, data)
         
 def bst_find(node: Union[BTNode, None], data: object) -> Union[BTNode, None]:
     """
@@ -213,7 +244,12 @@ def find_max(node):
     >>> find_max(b)
     8
     """
-    pass
+    if node is None:
+        return None
+    elif node.left is None and node.right is None:
+        return node.data
+    else:
+        return find_max(node.right)
 
 def in_order_travel(node: Union[BTNode, None]) -> List[object]:
     """
@@ -222,7 +258,12 @@ def in_order_travel(node: Union[BTNode, None]) -> List[object]:
     >>> in_order_travel(b)
     [4, 5, 8]
     """
-    pass
+    if node is None:
+        return []
+    else:
+        left_list = in_order_travel(node.left)
+        right_list = in_order_travel(node.right)
+        return left_list + [node.data] + right_list
 
 # General Tree (Tree)
 class Tree:
@@ -247,7 +288,10 @@ class Tree:
         >>> t.sum_values()
         48
         """
-        pass
+        return self.value + sum(
+            c.sum_values()
+            for c in self.children
+            )
     
     def max_value(self):
         """ Returns the maximum value within the tree
@@ -256,7 +300,13 @@ class Tree:
         >>> t.max_value()
         17
         """
-        pass
+        if self.children == []:
+            return self.value
+        else:
+            return max([self.value] + [
+                c.max_value()
+                for c in self.children
+                ])
     
     def sum_values_above_n(self, n):
         """ Returns the sum of all the values that are strickly greater than n.
@@ -265,7 +315,18 @@ class Tree:
         >>> t.sum_values_above_n(5)
         53
         """
-        pass
+        if self.value > n:
+            _self = self.value
+        else:
+            _self = 0
+        if self.children == []:
+            return _self
+        else:
+            return _self + sum(
+                c.sum_values_above_n(n)
+                for c in self.children
+                )
+            
     
     def __contains__(self, obj):
         """ Return true if obj in tree, False otherwise
@@ -278,7 +339,12 @@ class Tree:
         >>> 55 in t
         False
         """
-        pass
+        return any(
+            [obj == self.value]+
+            [
+                obj in c
+                for c in self.children
+                ])
     
     def longest_path(self):
         """ Returns a list of items on the longest possible path between the 
@@ -289,7 +355,13 @@ class Tree:
         >>> t.longest_path()
         [17, 3, 8, 9]
         """
-        pass
+        if self.children == []:
+            return [self.value]
+        else:
+            return [self.value] + max([
+                c.longest_path()
+                for c in self.children
+                ][::-1], key=len)
     
     def all_path(self):
         """
@@ -302,7 +374,15 @@ class Tree:
         >>> t.all_path()
         [[17, -2, 5], [17, -2, 6, -8], [17, -2, 6, 13], [17, 3, -7], [17, 3, 8, 9], [17, 4]]
         """
-        pass
+        if self.children == []:
+            return [self.value]
+        else:
+            _self = [self.value]
+            return [
+                _self[:].append(i)
+                for c in self.children
+                for l in c.all_path()
+                ]
     
     def partition_leaves(self):
         """ Returns a tuple of two lists, where the first list contains the 
@@ -314,7 +394,23 @@ class Tree:
         >>> t.partition_leaves()
         ([-8, -7], [5, 13, 9, 4])
         """
-        pass
+        if self.value < 0:
+            _self = ([self.value], [])
+        else:
+            _self = ([], [self.value])
+        if self.children == []:
+            return _self
+        else:
+            return (
+                sum([
+                    c.partition_leaves()[0]
+                    for c in self.children
+                    ], []),
+                sum([
+                    c.partition_leaves()[1]
+                    for c in self.children
+                    ], [])
+                )
     
     def sum_at_depth(self, depth):
         """ Returns the sum of all the values at given d
@@ -331,7 +427,13 @@ class Tree:
         >>> t.sum_at_depth(4)
         0
         """
-        pass
+        if depth == 0:
+            return self.value
+        else:
+            return sum([
+                c.sum_at_depth(depth - 1)
+                for c in self.children
+                ])
     
     def remove_beyond_depth(self, depth: int) -> None:
         """ Remove all children and all children's children at depth 

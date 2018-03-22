@@ -16,7 +16,7 @@ class Tree:
         self.children = children.copy() if children else []
 
     def _get_leaf_count(self):
-        if not self.children:
+        if not self.children: # if is leave, that's, children is [], not [] -> True
             return 1
         else:
             return sum(
